@@ -14,7 +14,7 @@ yarn add malcomponents
 
 ## Components
 
-- Spinner
+- [`Spinner`](./docs/Spinner.md)
 
 ## License
 
