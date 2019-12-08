@@ -1,11 +1,12 @@
 {
   "name": "malcomponents",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "parcel serve src/index.js",
-    "build": "parcel build src/index.js"
+    "dev": "parcel serve dev/public/index.html",
+    "build": "parcel build src/index.js",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",

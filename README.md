@@ -12,6 +12,21 @@ Collection of React components.
 yarn add malcomponents
 ```
 
+```jsx
+import React from "react";
+import { ThemeProvider, Button } from "malcomponents";
+
+function App() {
+  return (
+    <ThemeProvider>
+      <Button>Button</Button>
+    </ThemeProvider>
+  );
+}
+
+export default App;
+```
+
 ## Components
 
 - [`Spinner`](./docs/Spinner.md)
