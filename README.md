@@ -30,6 +30,7 @@ export default App;
 ## Components
 
 - [`Button`](./docs/Button.md)
+- [`Input`](./docs/Input.md)
 - [`Spinner`](./docs/Spinner.md)
 
 ## License

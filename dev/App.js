@@ -7,10 +7,7 @@ function App() {
   return (
     <ThemeProvider>
       <Button>Button</Button>
-      <Input
-        value={value}
-        onChange={e => setValue(e.currentTarget.value)}
-      ></Input>
+      <Input value={value} onChange={e => setValue(e.currentTarget.value)} />
       <Spinner />
     </ThemeProvider>
   );
