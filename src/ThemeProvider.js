@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 
-import defaultTheme from "./themes/darkTheme";
+import { LightTheme as defaultTheme } from "./themes";
 
 function CustomThemeProvider(props) {
   const theme = {

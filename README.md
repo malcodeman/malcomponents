@@ -27,6 +27,26 @@ function App() {
 export default App;
 ```
 
+## Theming
+
+malcomponents ships by default with the `Light` theme.
+With the `ThemeProvider`, you can apply a theme to your application. By default, malcomponents ships with a light and a dark theme.
+
+```jsx
+import React from "react";
+import { ThemeProvider, DarkTheme, Button } from "malcomponents";
+
+function App() {
+  return (
+    <ThemeProvider theme={DarkTheme}>
+      <Button>Button</Button>
+    </ThemeProvider>
+  );
+}
+
+export default App;
+```
+
 ## Components
 
 - [`Button`](./docs/Button.md)
