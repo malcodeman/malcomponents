@@ -2,6 +2,7 @@ import typography from "./typography";
 
 const theme = {
   colors: {
+    accent: "#276EF1",
     foreground: "#CBCBCB",
     foregroundAlt: "#757575",
     borderFocus: "#FFFFFF",

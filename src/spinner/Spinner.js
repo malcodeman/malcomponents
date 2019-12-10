@@ -14,10 +14,13 @@ const rotate = keyframes`
 const StyledSpinner = styled.div`
   animation ${rotate} 1s linear infinite;
   border-radius: 50%;
-  border-left: 2px solid ${props => props.color};
-  border-top: 2px solid transparent;
-  border-right: 2px solid ${props => props.color};
-  border-bottom: 2px solid ${props => props.color};
+  border-left: 2px solid transparent;
+  border-top: 2px solid ${props =>
+    props.color || props.theme.malcode.colors.accent};
+  border-right: 2px solid ${props =>
+    props.color || props.theme.malcode.colors.accent};
+  border-bottom: 2px solid ${props =>
+    props.color || props.theme.malcode.colors.accent};
   height: ${props => props.size};
   width: ${props => props.size};
 `;
@@ -34,7 +37,6 @@ Spinner.propTypes = {
 };
 
 Spinner.defaultProps = {
-  color: "currentColor",
   size: "1rem"
 };
 
