@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { ThemeProvider, Spinner, Input, Button } from "../src/index";
+import {
+  ThemeProvider,
+  Button,
+  FormControl,
+  Spinner,
+  Input
+} from "../src/index";
 
 function App() {
   const [value, setValue] = useState("input");
@@ -7,7 +13,9 @@ function App() {
   return (
     <ThemeProvider>
       <Button>Button</Button>
-      <Input value={value} onChange={e => setValue(e.currentTarget.value)} />
+      <FormControl label="Your email">
+        <Input value={value} onChange={e => setValue(e.currentTarget.value)} />
+      </FormControl>
       <Spinner />
     </ThemeProvider>
   );

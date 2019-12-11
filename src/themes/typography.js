@@ -7,6 +7,12 @@ const typography = {
     font-weight: normal;
     line-height: 1.42;
   `,
+  font250: css`
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.42;
+  `,
   font300: css`
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
