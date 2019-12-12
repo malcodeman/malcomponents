@@ -1,6 +1,18 @@
 import { css } from "styled-components";
 
 const typography = {
+  font100: css`
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.42;
+  `,
+  font150: css`
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.42;
+  `,
   font200: css`
     font-family: "Roboto", sans-serif;
     font-size: 0.875rem;

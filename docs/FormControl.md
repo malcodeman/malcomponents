@@ -20,6 +20,7 @@ function Demo() {
 ## Props
 
 - **`label`**_`: string`_
+- **`caption`**_`: string`_
 - **`disabled`**_`: boolean`_
 - **`error`**_`: boolean`_
 - **`positive`**_`: boolean`_
