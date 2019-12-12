@@ -50,6 +50,7 @@ export default App;
 ## Components
 
 - [`Button`](./docs/Button.md)
+- [`FormControl`](./docs/FormControl.md)
 - [`Input`](./docs/Input.md)
 - [`Spinner`](./docs/Spinner.md)
 
