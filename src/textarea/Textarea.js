@@ -5,11 +5,12 @@ import styled, { css } from "styled-components";
 import { SIZE } from "./constants";
 import { getInputStyles } from "./styles";
 
-const StyledInput = styled.input`
+const StyledTextarea = styled.textarea`
+  resize: none;
   ${getInputStyles};
 `;
 
-function Input(props) {
+function Textarea(props) {
   const {
     size,
     value,
@@ -21,7 +22,7 @@ function Input(props) {
   } = props;
 
   return (
-    <StyledInput
+    <StyledTextarea
       {...props}
       size={size}
       value={value}
@@ -34,7 +35,7 @@ function Input(props) {
   );
 }
 
-Input.propTypes = {
+Textarea.propTypes = {
   size: PropTypes.oneOf([SIZE.default, SIZE.compact, SIZE.large]),
   value: PropTypes.string,
   placeholder: PropTypes.string,
@@ -44,7 +45,7 @@ Input.propTypes = {
   onChange: PropTypes.func
 };
 
-Input.defaultProps = {
+Textarea.defaultProps = {
   size: SIZE.default,
   value: "",
   placeholder: "",
@@ -54,4 +55,4 @@ Input.defaultProps = {
   onChange: () => {}
 };
 
-export default Input;
+export default Textarea;

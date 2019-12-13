@@ -4,7 +4,8 @@ import {
   Button,
   FormControl,
   Spinner,
-  Input
+  Input,
+  Textarea
 } from "../src/index";
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
   return (
     <ThemeProvider>
       <Button>Button</Button>
-      <FormControl label="Your email">
+      <FormControl label="Your email" positive>
         <Input value={value} onChange={e => setValue(e.currentTarget.value)} />
       </FormControl>
       <Spinner />
+      <Textarea value={value} onChange={e => setValue(e.currentTarget.value)} />
     </ThemeProvider>
   );
 }
