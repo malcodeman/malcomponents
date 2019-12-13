@@ -52,6 +52,7 @@ export default App;
 - [`Button`](./docs/Button.md)
 - [`FormControl`](./docs/FormControl.md)
 - [`Input`](./docs/Input.md)
+- [`Notification`](./docs/Notification.md)
 - [`Spinner`](./docs/Spinner.md)
 - [`Textarea`](./docs/Textarea.md)
 

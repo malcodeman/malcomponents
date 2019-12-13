@@ -21,7 +21,15 @@ const theme = {
     inputBorderError: "#F4AFA7",
     inputFillPositive: "#F0F9F4",
     inputBorderPositive: "#AEDDC2",
-    inputFillActive: "#F6F6F6"
+    inputFillActive: "#F6F6F6",
+    notificationInfoBackground: "#EEF3FE",
+    notificationInfoText: "#1E54B7",
+    notificationPositiveBackground: "#F0F9F4",
+    notificationPositiveText: "#368759",
+    notificationWarningBackground: "#FEF3EF",
+    notificationWarningText: "#B45427",
+    notificationNegativeBackground: "#FDF0EF",
+    notificationNegativeText: "#AE372A"
   },
   typography
 };

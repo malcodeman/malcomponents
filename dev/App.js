@@ -3,8 +3,9 @@ import {
   ThemeProvider,
   Button,
   FormControl,
-  Spinner,
   Input,
+  Notification,
+  Spinner,
   Textarea
 } from "../src/index";
 
@@ -14,9 +15,10 @@ function App() {
   return (
     <ThemeProvider>
       <Button>Button</Button>
-      <FormControl label="Your email" positive>
+      <FormControl label="Your email">
         <Input value={value} onChange={e => setValue(e.currentTarget.value)} />
       </FormControl>
+      <Notification>Notification</Notification>
       <Spinner />
       <Textarea value={value} onChange={e => setValue(e.currentTarget.value)} />
     </ThemeProvider>
