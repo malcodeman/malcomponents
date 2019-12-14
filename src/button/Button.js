@@ -20,16 +20,30 @@ function getFontStyles(props) {
 }
 
 function getKindStyles(props) {
-  const { kind } = props;
+  const { kind, isSelected } = props;
 
   switch (kind) {
     default:
     case KIND.primary:
+      if (isSelected) {
+        return css`
+          background-color: ${props.theme.malcode.colors
+            .buttonPrimarySelectedFill};
+          color: ${props.theme.malcode.colors.buttonPrimarySelectedText};
+        `;
+      }
       return css`
         background-color: ${props.theme.malcode.colors.buttonPrimaryFill};
         color: ${props.theme.malcode.colors.buttonPrimaryText};
       `;
     case KIND.secondary:
+      if (isSelected) {
+        return css`
+          background-color: ${props.theme.malcode.colors
+            .buttonSecondarySelectedFill};
+          color: ${props.theme.malcode.colors.buttonSecondarySelectedText};
+        `;
+      }
       return css`
         background-color: ${props.theme.malcode.colors.buttonSecondaryFill};
         color: ${props.theme.malcode.colors.buttonSecondaryText};
@@ -78,6 +92,7 @@ Button.propTypes = {
   size: PropTypes.oneOf([SIZE.default, SIZE.compact, SIZE.large]),
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
+  isSelected: PropTypes.bool,
   onClick: PropTypes.func
 };
 
@@ -86,6 +101,7 @@ Button.defaultProps = {
   size: SIZE.default,
   disabled: false,
   isLoading: false,
+  isSelected: false,
   onClick: () => {}
 };
 
