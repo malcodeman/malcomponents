@@ -21,6 +21,7 @@
     "parcel": "^2.0.0-alpha.3.2"
   },
   "dependencies": {
+    "malhooks": "^1.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

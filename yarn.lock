@@ -3972,6 +3972,11 @@ magic-string@^0.22.4:
   dependencies:
     vlq "^0.2.2"
 
+malhooks@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/malhooks/-/malhooks-1.0.6.tgz#9602dc5ce90b826d57cc1b7480949799e96343ef"
+  integrity sha512-86avvU0DeJlGaLzvGodhNdsi6tiF7unhEbFqfguLFSF0ksS6xbYHLFNegSzjdE6B7rziIygrbjJHRURvFy5HIQ==
+
 map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"

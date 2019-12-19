@@ -9,10 +9,18 @@ import {
   Spinner,
   Textarea
 } from "../src/index";
+import {
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  ModalButton
+} from "../src/modal";
 
 function App() {
   const [value, setValue] = useState("input");
   const [selected, setSelected] = useState([0]);
+  const [modal, setModal] = useState(false);
 
   return (
     <ThemeProvider>
@@ -32,6 +40,19 @@ function App() {
       <Notification>Notification</Notification>
       <Spinner />
       <Textarea value={value} onChange={e => setValue(e.currentTarget.value)} />
+      <Button onClick={() => setModal(true)}>Open modal</Button>
+      <Modal isOpen={modal} onClose={() => setModal(false)}>
+        <ModalHeader>Some Header</ModalHeader>
+        <ModalBody>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quam
+          nisl, tempor ut varius sit amet, sodales sit amet mauris. Aliquam
+          vitae sapien quis eros finibus aliquet.
+        </ModalBody>
+        <ModalFooter>
+          <ModalButton>Close</ModalButton>
+          <ModalButton>Confirm</ModalButton>
+        </ModalFooter>
+      </Modal>
     </ThemeProvider>
   );
 }
