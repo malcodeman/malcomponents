@@ -6,6 +6,7 @@ import {
   FormControl,
   Input,
   Notification,
+  SideNavigation,
   Spinner,
   Textarea
 } from "../src/index";
@@ -21,6 +22,7 @@ function App() {
   const [value, setValue] = useState("input");
   const [selected, setSelected] = useState([0]);
   const [modal, setModal] = useState(false);
+  const [activeItemId, setActiveItemId] = React.useState("#home");
 
   return (
     <ThemeProvider>
@@ -38,6 +40,16 @@ function App() {
         <Input value={value} onChange={e => setValue(e.currentTarget.value)} />
       </FormControl>
       <Notification>Notification</Notification>
+      <SideNavigation
+        activeItemId={activeItemId}
+        items={[
+          { title: "Home", itemId: "#home" },
+          { title: "Account", itemId: "#account" }
+        ]}
+        onChange={({ event, item }) => {
+          setActiveItemId(item.itemId);
+        }}
+      />
       <Spinner />
       <Textarea value={value} onChange={e => setValue(e.currentTarget.value)} />
       <Button onClick={() => setModal(true)}>Open modal</Button>

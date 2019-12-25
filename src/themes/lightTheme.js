@@ -2,9 +2,12 @@ import typography from "./typography";
 
 const theme = {
   colors: {
+    primary: "#000000",
     accent: "#276EF1",
     background: "#FFFFFF",
     backgroundPrimary: "#FFFFFF",
+    backgroundInversePrimary: "#000000",
+    contentPrimary: "#000000",
     negative: "#D44333",
     positive: "#3AA76D",
     foreground: "#000000",
