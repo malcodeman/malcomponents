@@ -55,6 +55,7 @@ export default App;
 - [`Input`](./docs/Input.md)
 - [`Modal`](./docs/Modal.md)
 - [`Notification`](./docs/Notification.md)
+- [`SideNavigation`](./docs/SideNavigation.md)
 - [`Spinner`](./docs/Spinner.md)
 - [`Textarea`](./docs/Textarea.md)
 

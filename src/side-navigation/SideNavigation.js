@@ -46,7 +46,7 @@ function SideNavigation(props) {
   }
 
   return (
-    <Navigation>
+    <Navigation {...props}>
       <List>
         {items.map(item => {
           return (
