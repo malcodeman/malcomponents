@@ -8,4 +8,6 @@ export { default as Notification } from "./notification/Notification";
 export { default as SideNavigation } from "./side-navigation/SideNavigation";
 export { default as Spinner } from "./spinner/Spinner";
 export { default as Table } from "./table/Table";
+export { default as BodyCell } from "./table/BodyCell";
+export { default as HeadCell } from "./table/HeadCell";
 export { default as Textarea } from "./textarea/Textarea";

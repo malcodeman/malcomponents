@@ -8,7 +8,10 @@ import {
   Notification,
   SideNavigation,
   Spinner,
-  Textarea
+  Textarea,
+  Table,
+  HeadCell,
+  BodyCell
 } from "../src/index";
 import {
   Modal,
@@ -17,7 +20,6 @@ import {
   ModalFooter,
   ModalButton
 } from "../src/modal";
-import { Table, HeadCell, BodyCell } from "../src/table";
 
 function App() {
   const [value, setValue] = useState("input");
