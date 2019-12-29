@@ -57,6 +57,7 @@ export default App;
 - [`Notification`](./docs/Notification.md)
 - [`SideNavigation`](./docs/SideNavigation.md)
 - [`Spinner`](./docs/Spinner.md)
+- [`Table`](./docs/Table.md)
 - [`Textarea`](./docs/Textarea.md)
 
 ## License
