@@ -1,4 +1,6 @@
 import typography from "./typography";
+import lighting from "./lighting";
+import borders from "./borders";
 
 const theme = {
   colors: {
@@ -38,9 +40,13 @@ const theme = {
     notificationWarningBackground: "#5F2C14",
     notificationWarningText: "#F7BFA5",
     notificationNegativeBackground: "#5C1D16",
-    notificationNegativeText: "#F4AFA7"
+    notificationNegativeText: "#F4AFA7",
+    tableBackground: "#141414",
+    tableHeadBackgroundColor: "#1F1F1F"
   },
-  typography
+  typography,
+  lighting,
+  borders
 };
 
 export default theme;
