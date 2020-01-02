@@ -13,6 +13,7 @@ import {
   HeadCell,
   BodyCell
 } from "../src/index";
+import { HeaderNavigation, NavigationList, NavigationItem } from "../src/index";
 import {
   Modal,
   ModalHeader,
@@ -42,6 +43,19 @@ function App() {
       <FormControl label="Your email">
         <Input value={value} onChange={e => setValue(e.currentTarget.value)} />
       </FormControl>
+      <HeaderNavigation>
+        <NavigationList>
+          <NavigationItem>Test</NavigationItem>
+        </NavigationList>
+        <NavigationList>
+          <NavigationItem>Malcomponents</NavigationItem>
+        </NavigationList>
+        <NavigationList align="center">
+          <NavigationItem>
+            <Button>Get started</Button>
+          </NavigationItem>
+        </NavigationList>
+      </HeaderNavigation>
       <Notification>Notification</Notification>
       <SideNavigation
         activeItemId={activeItemId}

@@ -3,6 +3,11 @@ export { default as ThemeProvider } from "./ThemeProvider";
 export { default as Button } from "./button/Button";
 export { default as ButtonGroup } from "./button-group/ButtonGroup";
 export { default as FormControl } from "./form-control/FormControl";
+export {
+  HeaderNavigation,
+  NavigationItem,
+  NavigationList
+} from "./header-navigation/index";
 export { default as Input } from "./input/Input";
 export {
   Modal,

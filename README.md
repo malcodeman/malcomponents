@@ -52,6 +52,7 @@ export default App;
 - [`Button`](./docs/Button.md)
 - [`ButtonGroup`](./docs/ButtonGroup.md)
 - [`FormControl`](./docs/FormControl.md)
+- [`HeaderNavigation`](./docs/HeaderNavigation.md)
 - [`Input`](./docs/Input.md)
 - [`Modal`](./docs/Modal.md)
 - [`Notification`](./docs/Notification.md)
