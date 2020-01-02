@@ -4,6 +4,13 @@ export { default as Button } from "./button/Button";
 export { default as ButtonGroup } from "./button-group/ButtonGroup";
 export { default as FormControl } from "./form-control/FormControl";
 export { default as Input } from "./input/Input";
+export {
+  Modal,
+  ModalBody,
+  ModalButton,
+  ModalFooter,
+  ModalHeader
+} from "./modal/index";
 export { default as Notification } from "./notification/Notification";
 export { default as SideNavigation } from "./side-navigation/SideNavigation";
 export { default as Spinner } from "./spinner/Spinner";
