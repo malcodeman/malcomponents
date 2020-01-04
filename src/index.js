@@ -23,3 +23,15 @@ export { default as Table } from "./table/Table";
 export { default as BodyCell } from "./table/BodyCell";
 export { default as HeadCell } from "./table/HeadCell";
 export { default as Textarea } from "./textarea/Textarea";
+export {
+  ParagraphXSmall,
+  ParagraphSmall,
+  ParagraphMedium,
+  ParagraphLarge,
+  HeadingXSmall,
+  HeadingSmall,
+  HeadingMedium,
+  HeadingLarge,
+  HeadingXLarge,
+  HeadingXXLarge
+} from "./typography/index";

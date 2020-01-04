@@ -11,7 +11,17 @@ import {
   Textarea,
   Table,
   HeadCell,
-  BodyCell
+  BodyCell,
+  ParagraphXSmall,
+  ParagraphSmall,
+  ParagraphMedium,
+  ParagraphLarge,
+  HeadingXSmall,
+  HeadingSmall,
+  HeadingMedium,
+  HeadingLarge,
+  HeadingXLarge,
+  HeadingXXLarge
 } from "../src/index";
 import { HeaderNavigation, NavigationList, NavigationItem } from "../src/index";
 import {
@@ -90,6 +100,16 @@ function App() {
         <BodyCell>Row 2</BodyCell>
         <BodyCell>Row 2</BodyCell>
       </Table>
+      <ParagraphXSmall>ParagraphXSmall</ParagraphXSmall>
+      <ParagraphSmall>ParagraphSmall</ParagraphSmall>
+      <ParagraphMedium>ParagraphMedium</ParagraphMedium>
+      <ParagraphLarge>ParagraphLarge</ParagraphLarge>
+      <HeadingXSmall>HeadingXSmall</HeadingXSmall>
+      <HeadingSmall>HeadingSmall</HeadingSmall>
+      <HeadingMedium>HeadingMedium</HeadingMedium>
+      <HeadingLarge>HeadingLarge</HeadingLarge>
+      <HeadingXLarge>HeadingXLarge</HeadingXLarge>
+      <HeadingXXLarge>HeadingXXLarge</HeadingXXLarge>
     </ThemeProvider>
   );
 }
