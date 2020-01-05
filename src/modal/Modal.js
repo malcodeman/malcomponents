@@ -34,7 +34,7 @@ function Modal(props) {
   const { onClose, mountNode, isOpen, size, children } = props;
   const ref = createRef();
 
-  useLockBodyScroll();
+  useLockBodyScroll(isOpen);
   useKeyPress("Escape", onClose);
   useOnClickOutside(ref, onClose);
 
