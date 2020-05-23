@@ -1,2 +1,5 @@
-dev
 .parcel-cache
+.storybook
+src
+stories
+storybook-static
