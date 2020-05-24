@@ -3,16 +3,14 @@ import React from "react";
 import theme from "../src/themes/lightTheme";
 
 import ThemeProvider from "../src/ThemeProvider";
-import Input from "../src/input/Input";
+import Notification from "../src/notification/Notification";
 
-export default { title: "Input" };
+export default { title: "Notification" };
 
 export function Default() {
-  const [value, setValue] = React.useState("");
-
   return (
     <ThemeProvider theme={theme}>
-      <Input value={value} onChange={(e) => setValue(e.currentTarget.value)} />
+      <Notification>Notification</Notification>
     </ThemeProvider>
   );
 }
