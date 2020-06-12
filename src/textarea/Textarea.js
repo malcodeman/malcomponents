@@ -18,7 +18,7 @@ function Textarea(props) {
     disabled,
     error,
     positive,
-    onChange
+    onChange,
   } = props;
 
   return (
@@ -42,7 +42,7 @@ Textarea.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   positive: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
 
 Textarea.defaultProps = {
@@ -52,7 +52,7 @@ Textarea.defaultProps = {
   disabled: false,
   error: false,
   positive: false,
-  onChange: () => {}
+  onChange: () => {},
 };
 
 export default Textarea;

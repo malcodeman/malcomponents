@@ -45,12 +45,12 @@ const theme = {
     notificationNegativeText: "#F4AFA7",
     tableBackground: "#141414",
     tableHeadBackgroundColor: "#1F1F1F",
-    headerNavigationFill: "#1F1F1F"
+    headerNavigationFill: "#1F1F1F",
   },
   typography,
   lighting,
   borders,
-  sizing
+  sizing,
 };
 
 export default theme;

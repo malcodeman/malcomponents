@@ -21,22 +21,23 @@ function getColors(props) {
 
   if (error) {
     return css`
-      color: ${props => props.theme.malcode.colors.foreground};
-      border-color: ${props => props.theme.malcode.colors.inputBorderError};
-      background-color: ${props => props.theme.malcode.colors.inputFillError};
+      color: ${(props) => props.theme.malcode.colors.foreground};
+      border-color: ${(props) => props.theme.malcode.colors.inputBorderError};
+      background-color: ${(props) => props.theme.malcode.colors.inputFillError};
     `;
   } else if (positive) {
     return css`
-      color: ${props => props.theme.malcode.colors.foreground};
-      border-color: ${props => props.theme.malcode.colors.inputBorderPositive};
-      background-color: ${props =>
+      color: ${(props) => props.theme.malcode.colors.foreground};
+      border-color: ${(props) =>
+        props.theme.malcode.colors.inputBorderPositive};
+      background-color: ${(props) =>
         props.theme.malcode.colors.inputFillPositive};
     `;
   } else {
     return css`
-      color: ${props => props.theme.malcode.colors.foreground};
-      border-color: ${props => props.theme.malcode.colors.inputFill};
-      background-color: ${props => props.theme.malcode.colors.inputFill};
+      color: ${(props) => props.theme.malcode.colors.foreground};
+      border-color: ${(props) => props.theme.malcode.colors.inputFill};
+      background-color: ${(props) => props.theme.malcode.colors.inputFill};
     `;
   }
 }
@@ -50,20 +51,21 @@ export const getInputStyles = css`
   width: 100%;
   :disabled {
     cursor: not-allowed;
-    background-color: ${props => props.theme.malcode.colors.inputFillDisabled};
-    border-color: ${props => props.theme.malcode.colors.inputFillDisabled};
-    color: ${props => props.theme.malcode.colors.inputTextDisabled};
+    background-color: ${(props) =>
+      props.theme.malcode.colors.inputFillDisabled};
+    border-color: ${(props) => props.theme.malcode.colors.inputFillDisabled};
+    color: ${(props) => props.theme.malcode.colors.inputTextDisabled};
   }
   :disabled::placeholder {
-    color: ${props => props.theme.malcode.colors.inputTextDisabled};
+    color: ${(props) => props.theme.malcode.colors.inputTextDisabled};
   }
   :focus {
-    background-color: ${props => props.theme.malcode.colors.inputFillActive};
-    border-color: ${props => props.theme.malcode.colors.borderFocus};
-    color: ${props => props.theme.malcode.colors.foreground};
+    background-color: ${(props) => props.theme.malcode.colors.inputFillActive};
+    border-color: ${(props) => props.theme.malcode.colors.borderFocus};
+    color: ${(props) => props.theme.malcode.colors.foreground};
   }
   ::placeholder {
-    color: ${props => props.theme.malcode.colors.foregroundAlt};
+    color: ${(props) => props.theme.malcode.colors.foregroundAlt};
   }
   ${getFont};
   ${getColors};

@@ -6,11 +6,11 @@ const Label = styled.label`
   display: block;
   margin: 8px 0;
   width: 100%;
-  color: ${props =>
+  color: ${(props) =>
     props.disabled
       ? props.theme.malcode.colors.foregroundAlt
       : props.theme.malcode.colors.foreground};
-  ${props => props.theme.malcode.typography.font250}
+  ${(props) => props.theme.malcode.typography.font250}
 `;
 
 function getColor(props) {
@@ -28,7 +28,7 @@ function getColor(props) {
 const Caption = styled.div`
   margin: 8px 0;
   color: ${getColor};
-  ${props => props.theme.malcode.typography.font100}
+  ${(props) => props.theme.malcode.typography.font100}
 `;
 
 function FormControl(props) {
@@ -52,7 +52,7 @@ FormControl.propTypes = {
   caption: PropTypes.string,
   disabled: PropTypes.bool,
   error: PropTypes.bool,
-  positive: PropTypes.bool
+  positive: PropTypes.bool,
 };
 
 FormControl.defaultProps = {
@@ -60,7 +60,7 @@ FormControl.defaultProps = {
   caption: "",
   disabled: false,
   error: false,
-  positive: false
+  positive: false,
 };
 
 export default FormControl;

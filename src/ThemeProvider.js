@@ -6,18 +6,18 @@ import { LightTheme as defaultTheme } from "./themes";
 
 function CustomThemeProvider(props) {
   const theme = {
-    malcode: { ...defaultTheme, ...props.theme }
+    malcode: { ...defaultTheme, ...props.theme },
   };
 
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 }
 
 CustomThemeProvider.propTypes = {
-  theme: PropTypes.object
+  theme: PropTypes.object,
 };
 
 CustomThemeProvider.defaultProps = {
-  theme: {}
+  theme: {},
 };
 
 export default CustomThemeProvider;

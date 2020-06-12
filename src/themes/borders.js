@@ -8,7 +8,7 @@ const borders = {
   radius100: "2px",
   radius200: "4px",
   radius300: "8px",
-  radius400: "12px"
+  radius400: "12px",
 };
 
 export default borders;

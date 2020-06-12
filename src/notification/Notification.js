@@ -40,7 +40,7 @@ const StyledNofitication = styled.div`
   padding: 1rem;
   background-color: ${getBackgroundColor};
   color: ${getColor};
-  ${props => props.theme.malcode.typography.font250}
+  ${(props) => props.theme.malcode.typography.font250}
 `;
 
 function Notification(props) {
@@ -50,11 +50,16 @@ function Notification(props) {
 }
 
 Notification.propTypes = {
-  kind: PropTypes.oneOf([KIND.info, KIND.positive, KIND.warning, KIND.negative])
+  kind: PropTypes.oneOf([
+    KIND.info,
+    KIND.positive,
+    KIND.warning,
+    KIND.negative,
+  ]),
 };
 
 Notification.defaultProps = {
-  kind: KIND.info
+  kind: KIND.info,
 };
 
 export default Notification;

@@ -17,7 +17,7 @@ function Input(props) {
     disabled,
     error,
     positive,
-    onChange
+    onChange,
   } = props;
 
   return (
@@ -41,7 +41,7 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   positive: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
 
 Input.defaultProps = {
@@ -51,7 +51,7 @@ Input.defaultProps = {
   disabled: false,
   error: false,
   positive: false,
-  onChange: () => {}
+  onChange: () => {},
 };
 
 export default Input;

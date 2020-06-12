@@ -114,7 +114,7 @@ const typography = {
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.3;
-  `
+  `,
 };
 
 export default typography;

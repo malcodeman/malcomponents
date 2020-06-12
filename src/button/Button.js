@@ -58,8 +58,9 @@ const StyledButton = styled.button`
   padding: 0.5rem 1rem;
   :disabled {
     cursor: not-allowed;
-    background-color: ${props => props.theme.malcode.colors.buttonDisabledFill};
-    color: ${props => props.theme.malcode.colors.buttonDisabledText};
+    background-color: ${(props) =>
+      props.theme.malcode.colors.buttonDisabledFill};
+    color: ${(props) => props.theme.malcode.colors.buttonDisabledText};
   }
   ${getFontStyles};
   ${getKindStyles};
@@ -93,7 +94,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
   isSelected: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
@@ -102,7 +103,7 @@ Button.defaultProps = {
   disabled: false,
   isLoading: false,
   isSelected: false,
-  onClick: () => {}
+  onClick: () => {},
 };
 
 export default Button;
