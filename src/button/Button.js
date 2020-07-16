@@ -11,11 +11,11 @@ function getFontStyles(props) {
   switch (size) {
     default:
     case SIZE.default:
-      return props.theme.malcode.typography.font450;
+      return props.theme.malcode?.typography.font450;
     case SIZE.compact:
-      return props.theme.malcode.typography.font350;
+      return props.theme.malcode?.typography.font350;
     case SIZE.large:
-      return props.theme.malcode.typography.font550;
+      return props.theme.malcode?.typography.font550;
   }
 }
 
@@ -27,26 +27,26 @@ function getKindStyles(props) {
     case KIND.primary:
       if (isSelected) {
         return css`
-          background-color: ${props.theme.malcode.colors
+          background-color: ${props.theme.malcode?.colors
             .buttonPrimarySelectedFill};
-          color: ${props.theme.malcode.colors.buttonPrimarySelectedText};
+          color: ${props.theme.malcode?.colors.buttonPrimarySelectedText};
         `;
       }
       return css`
-        background-color: ${props.theme.malcode.colors.buttonPrimaryFill};
-        color: ${props.theme.malcode.colors.buttonPrimaryText};
+        background-color: ${props.theme.malcode?.colors.buttonPrimaryFill};
+        color: ${props.theme.malcode?.colors.buttonPrimaryText};
       `;
     case KIND.secondary:
       if (isSelected) {
         return css`
-          background-color: ${props.theme.malcode.colors
+          background-color: ${props.theme.malcode?.colors
             .buttonSecondarySelectedFill};
-          color: ${props.theme.malcode.colors.buttonSecondarySelectedText};
+          color: ${props.theme.malcode?.colors.buttonSecondarySelectedText};
         `;
       }
       return css`
-        background-color: ${props.theme.malcode.colors.buttonSecondaryFill};
-        color: ${props.theme.malcode.colors.buttonSecondaryText};
+        background-color: ${props.theme.malcode?.colors.buttonSecondaryFill};
+        color: ${props.theme.malcode?.colors.buttonSecondaryText};
       `;
   }
 }
@@ -59,8 +59,8 @@ const StyledButton = styled.button`
   :disabled {
     cursor: not-allowed;
     background-color: ${(props) =>
-      props.theme.malcode.colors.buttonDisabledFill};
-    color: ${(props) => props.theme.malcode.colors.buttonDisabledText};
+      props.theme.malcode?.colors.buttonDisabledFill};
+    color: ${(props) => props.theme.malcode?.colors.buttonDisabledText};
   }
   ${getFontStyles};
   ${getKindStyles};

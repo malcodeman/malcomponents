@@ -8,11 +8,11 @@ function getFont(props) {
   switch (size) {
     default:
     case SIZE.default:
-      return props.theme.malcode.typography.font300;
+      return props.theme.malcode?.typography.font300;
     case SIZE.compact:
-      return props.theme.malcode.typography.font200;
+      return props.theme.malcode?.typography.font200;
     case SIZE.large:
-      return props.theme.malcode.typography.font400;
+      return props.theme.malcode?.typography.font400;
   }
 }
 
@@ -21,23 +21,24 @@ function getColors(props) {
 
   if (error) {
     return css`
-      color: ${(props) => props.theme.malcode.colors.foreground};
-      border-color: ${(props) => props.theme.malcode.colors.inputBorderError};
-      background-color: ${(props) => props.theme.malcode.colors.inputFillError};
+      color: ${(props) => props.theme.malcode?.colors.foreground};
+      border-color: ${(props) => props.theme.malcode?.colors.inputBorderError};
+      background-color: ${(props) =>
+        props.theme.malcode?.colors.inputFillError};
     `;
   } else if (positive) {
     return css`
-      color: ${(props) => props.theme.malcode.colors.foreground};
+      color: ${(props) => props.theme.malcode?.colors.foreground};
       border-color: ${(props) =>
-        props.theme.malcode.colors.inputBorderPositive};
+        props.theme.malcode?.colors.inputBorderPositive};
       background-color: ${(props) =>
-        props.theme.malcode.colors.inputFillPositive};
+        props.theme.malcode?.colors.inputFillPositive};
     `;
   } else {
     return css`
-      color: ${(props) => props.theme.malcode.colors.foreground};
-      border-color: ${(props) => props.theme.malcode.colors.inputFill};
-      background-color: ${(props) => props.theme.malcode.colors.inputFill};
+      color: ${(props) => props.theme.malcode?.colors.foreground};
+      border-color: ${(props) => props.theme.malcode?.colors.inputFill};
+      background-color: ${(props) => props.theme.malcode?.colors.inputFill};
     `;
   }
 }
@@ -52,20 +53,20 @@ export const getInputStyles = css`
   :disabled {
     cursor: not-allowed;
     background-color: ${(props) =>
-      props.theme.malcode.colors.inputFillDisabled};
-    border-color: ${(props) => props.theme.malcode.colors.inputFillDisabled};
-    color: ${(props) => props.theme.malcode.colors.inputTextDisabled};
+      props.theme.malcode?.colors.inputFillDisabled};
+    border-color: ${(props) => props.theme.malcode?.colors.inputFillDisabled};
+    color: ${(props) => props.theme.malcode?.colors.inputTextDisabled};
   }
   :disabled::placeholder {
-    color: ${(props) => props.theme.malcode.colors.inputTextDisabled};
+    color: ${(props) => props.theme.malcode?.colors.inputTextDisabled};
   }
   :focus {
-    background-color: ${(props) => props.theme.malcode.colors.inputFillActive};
-    border-color: ${(props) => props.theme.malcode.colors.borderFocus};
-    color: ${(props) => props.theme.malcode.colors.foreground};
+    background-color: ${(props) => props.theme.malcode?.colors.inputFillActive};
+    border-color: ${(props) => props.theme.malcode?.colors.borderFocus};
+    color: ${(props) => props.theme.malcode?.colors.foreground};
   }
   ::placeholder {
-    color: ${(props) => props.theme.malcode.colors.foregroundAlt};
+    color: ${(props) => props.theme.malcode?.colors.foregroundAlt};
   }
   ${getFont};
   ${getColors};

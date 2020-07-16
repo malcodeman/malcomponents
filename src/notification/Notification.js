@@ -10,13 +10,13 @@ function getBackgroundColor(props) {
   switch (kind) {
     default:
     case KIND.info:
-      return props.theme.malcode.colors.notificationInfoBackground;
+      return props.theme.malcode?.colors.notificationInfoBackground;
     case KIND.positive:
-      return props.theme.malcode.colors.notificationPositiveBackground;
+      return props.theme.malcode?.colors.notificationPositiveBackground;
     case KIND.warning:
-      return props.theme.malcode.colors.notificationWarningBackground;
+      return props.theme.malcode?.colors.notificationWarningBackground;
     case KIND.negative:
-      return props.theme.malcode.colors.notificationNegativeBackground;
+      return props.theme.malcode?.colors.notificationNegativeBackground;
   }
 }
 
@@ -26,13 +26,13 @@ function getColor(props) {
   switch (kind) {
     default:
     case KIND.info:
-      return props.theme.malcode.colors.notificationInfoText;
+      return props.theme.malcode?.colors.notificationInfoText;
     case KIND.positive:
-      return props.theme.malcode.colors.notificationPositiveText;
+      return props.theme.malcode?.colors.notificationPositiveText;
     case KIND.warning:
-      return props.theme.malcode.colors.notificationWarningText;
+      return props.theme.malcode?.colors.notificationWarningText;
     case KIND.negative:
-      return props.theme.malcode.colors.notificationNegativeText;
+      return props.theme.malcode?.colors.notificationNegativeText;
   }
 }
 
@@ -40,7 +40,7 @@ const StyledNofitication = styled.div`
   padding: 1rem;
   background-color: ${getBackgroundColor};
   color: ${getColor};
-  ${(props) => props.theme.malcode.typography.font250}
+  ${(props) => props.theme.malcode?.typography.font250}
 `;
 
 function Notification(props) {

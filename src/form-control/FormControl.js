@@ -8,27 +8,27 @@ const Label = styled.label`
   width: 100%;
   color: ${(props) =>
     props.disabled
-      ? props.theme.malcode.colors.foregroundAlt
-      : props.theme.malcode.colors.foreground};
-  ${(props) => props.theme.malcode.typography.font250}
+      ? props.theme.malcode?.colors.foregroundAlt
+      : props.theme.malcode?.colors.foreground};
+  ${(props) => props.theme.malcode?.typography.font250}
 `;
 
 function getColor(props) {
   const { error, positive } = props;
 
   if (error) {
-    return props.theme.malcode.colors.negative;
+    return props.theme.malcode?.colors.negative;
   } else if (positive) {
-    return props.theme.malcode.colors.positive;
+    return props.theme.malcode?.colors.positive;
   } else {
-    return props.theme.malcode.colors.foregroundAlt;
+    return props.theme.malcode?.colors.foregroundAlt;
   }
 }
 
 const Caption = styled.div`
   margin: 8px 0;
   color: ${getColor};
-  ${(props) => props.theme.malcode.typography.font100}
+  ${(props) => props.theme.malcode?.typography.font100}
 `;
 
 function FormControl(props) {
