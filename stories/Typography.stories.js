@@ -1,6 +1,7 @@
 import React from "react";
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
 
-import theme from "../src/themes/lightTheme";
+import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
 import {
@@ -16,9 +17,12 @@ import {
   HeadingXXLarge,
 } from "../src/typography";
 
-export default { title: "Typography" };
+export default { title: "Typography", decorators: [withKnobs] };
 
 export function Default() {
+  const darkTheme = boolean("Dark theme", false);
+  const theme = darkTheme ? DarkTheme : LightTheme;
+
   return (
     <ThemeProvider theme={theme}>
       <ParagraphXSmall>ParagraphXSmall</ParagraphXSmall>

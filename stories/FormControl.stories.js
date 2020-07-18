@@ -1,7 +1,7 @@
 import React from "react";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
-import theme from "../src/themes/lightTheme";
+import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
 import FormControl from "../src/form-control/FormControl";
@@ -16,6 +16,8 @@ export function Default() {
   const disabled = boolean("Disabled", false);
   const positive = boolean("Positive", false);
   const error = boolean("Error", false);
+  const darkTheme = boolean("Dark theme", false);
+  const theme = darkTheme ? DarkTheme : LightTheme;
 
   return (
     <ThemeProvider theme={theme}>

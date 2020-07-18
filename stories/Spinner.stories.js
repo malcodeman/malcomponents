@@ -1,7 +1,7 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
-import theme from "../src/themes/lightTheme";
+import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
 import Spinner from "../src/spinner/Spinner";
@@ -10,7 +10,12 @@ export default { title: "Spinner", decorators: [withKnobs] };
 
 export function Default() {
   const size = text("Size", "1rem");
-  const color = text("Color", theme.colors.accent);
+  const darkTheme = boolean("Dark theme", false);
+  const color = text(
+    "Color",
+    darkTheme ? DarkTheme.colors.accent : LightTheme.colors.accent
+  );
+  const theme = darkTheme ? DarkTheme : LightTheme;
 
   return (
     <ThemeProvider theme={theme}>
