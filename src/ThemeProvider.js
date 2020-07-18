@@ -14,6 +14,7 @@ function CustomThemeProvider(props) {
 
 CustomThemeProvider.propTypes = {
   theme: PropTypes.object,
+  children: PropTypes.node,
 };
 
 CustomThemeProvider.defaultProps = {

@@ -56,6 +56,7 @@ Notification.propTypes = {
     KIND.warning,
     KIND.negative,
   ]),
+  children: PropTypes.node,
 };
 
 Notification.defaultProps = {

@@ -53,6 +53,7 @@ FormControl.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   positive: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 FormControl.defaultProps = {
