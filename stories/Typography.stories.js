@@ -1,5 +1,5 @@
 import React from "react";
-import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 import { DarkTheme, LightTheme } from "../src/themes";
 
