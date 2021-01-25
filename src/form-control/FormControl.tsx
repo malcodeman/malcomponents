@@ -2,7 +2,7 @@ import React, { cloneElement } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Label = styled.label`
+const Label = styled.label<{ disabled: boolean }>`
   display: block;
   margin: 8px 0;
   width: 100%;
@@ -25,7 +25,7 @@ function getColor(props) {
   }
 }
 
-const Caption = styled.div`
+const Caption = styled.div<{ error: boolean;positive:boolean }>`
   margin: 8px 0;
   color: ${getColor};
   ${(props) => props.theme.malcode?.typography.font100}

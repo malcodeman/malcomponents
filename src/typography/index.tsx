@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+      
 export const ParagraphXSmall = styled.p`
   color: ${(props) => props.theme.malcode?.colors.contentPrimary};
   ${(props) => props.theme.malcode?.typography.ParagraphXSmall};

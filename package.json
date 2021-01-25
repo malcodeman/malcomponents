@@ -1,11 +1,11 @@
 {
   "name": "malcomponents",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "dev": "start-storybook",
-    "build": "parcel build src/index.js",
+    "build": "parcel build src/index.ts",
     "build-storybook": "build-storybook",
     "deploy-storybook": "build-storybook && mv storybook-static/index.html storybook-static/200.html && surge storybook-static malcomponents.surge.sh",
     "lint": "eslint src/**"
@@ -28,6 +28,7 @@
     "@storybook/addon-storysource": "^6.1.14",
     "@storybook/addons": "^6.1.14",
     "@storybook/react": "^6.1.14",
+    "@types/styled-components": "^5.1.7",
     "babel-loader": "^8.2.2",
     "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",

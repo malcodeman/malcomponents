@@ -36,7 +36,7 @@ function getColor(props) {
   }
 }
 
-const StyledNofitication = styled.div`
+const StyledNofitication = styled.div<{ kind: string }>`
   padding: 1rem;
   background-color: ${getBackgroundColor};
   color: ${getColor};

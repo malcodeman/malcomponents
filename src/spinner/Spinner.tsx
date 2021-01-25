@@ -11,7 +11,7 @@ const rotate = keyframes`
   }
 `;
 
-const StyledSpinner = styled.div`
+const StyledSpinner = styled.div<{ size: string }>`
   animation: ${rotate} 1s linear infinite;
   border-radius: 50%;
   border-left: 2px solid transparent;

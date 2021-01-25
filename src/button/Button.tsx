@@ -66,6 +66,8 @@ const StyledButton = styled.button`
   ${getKindStyles};
 `;
 
+
+
 function Button(props) {
   const { kind, size, disabled, isLoading, onClick, children } = props;
 
