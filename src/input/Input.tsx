@@ -1,57 +1,51 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { SIZE } from "./constants";
+import { size } from "./constants";
 import { getInputStyles } from "./styles";
 
 const StyledInput = styled.input`
   ${getInputStyles};
 `;
 
-function Input(props) {
+type props = {
+  inputSize?: size;
+  name?: string;
+  value?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  error?: boolean;
+  positive?: boolean;
+  autoFocus?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+function Input(props: props) {
   const {
-    size,
-    value,
-    placeholder,
-    disabled,
-    error,
-    positive,
-    onChange,
+    inputSize = "default",
+    value = "",
+    placeholder = "",
+    disabled = false,
+    error = false,
+    positive = false,
+    onChange = () => {},
+    onBlur = () => {},
   } = props;
 
   return (
     <StyledInput
       {...props}
-      size={size}
+      inputSize={inputSize}
       value={value}
       placeholder={placeholder}
       disabled={disabled}
       error={error}
       positive={positive}
       onChange={onChange}
+      onBlur={onBlur}
     />
   );
 }
-
-Input.propTypes = {
-  size: PropTypes.oneOf([SIZE.default, SIZE.compact, SIZE.large]),
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
-  disabled: PropTypes.bool,
-  error: PropTypes.bool,
-  positive: PropTypes.bool,
-  onChange: PropTypes.func,
-};
-
-Input.defaultProps = {
-  size: SIZE.default,
-  value: "",
-  placeholder: "",
-  disabled: false,
-  error: false,
-  positive: false,
-  onChange: () => {},
-};
 
 export default Input;

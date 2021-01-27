@@ -1,22 +1,22 @@
-import { css } from "styled-components";
+import { css, DefaultTheme } from "styled-components";
 
-import { SIZE } from "./constants";
+import { size } from "./constants";
 
-function getFont(props) {
-  const { size } = props;
+function getFontStyles(props: { inputSize: size; theme: DefaultTheme }) {
+  const { inputSize } = props;
 
-  switch (size) {
+  switch (inputSize) {
     default:
-    case SIZE.default:
-      return props.theme.malcode?.typography.font300;
-    case SIZE.compact:
-      return props.theme.malcode?.typography.font200;
-    case SIZE.large:
-      return props.theme.malcode?.typography.font400;
+    case "default":
+      return props.theme.malcode?.typography.font450;
+    case "compact":
+      return props.theme.malcode?.typography.font350;
+    case "large":
+      return props.theme.malcode?.typography.font550;
   }
 }
 
-function getColors(props) {
+function getColorStyles(props: { error: boolean; positive: boolean }) {
   const { error, positive } = props;
 
   if (error) {
@@ -34,16 +34,19 @@ function getColors(props) {
       background-color: ${(props) =>
         props.theme.malcode?.colors.inputFillPositive};
     `;
-  } else {
-    return css`
-      color: ${(props) => props.theme.malcode?.colors.foreground};
-      border-color: ${(props) => props.theme.malcode?.colors.inputFill};
-      background-color: ${(props) => props.theme.malcode?.colors.inputFill};
-    `;
   }
+  return css`
+    color: ${(props) => props.theme.malcode?.colors.foreground};
+    border-color: ${(props) => props.theme.malcode?.colors.inputFill};
+    background-color: ${(props) => props.theme.malcode?.colors.inputFill};
+  `;
 }
 
-export const getInputStyles = css`
+export const getInputStyles = css<{
+  inputSize: size;
+  error: boolean;
+  positive: boolean;
+}>`
   border-width: 2px;
   border-style: solid;
   outline: 0;
@@ -68,6 +71,6 @@ export const getInputStyles = css`
   ::placeholder {
     color: ${(props) => props.theme.malcode?.colors.foregroundAlt};
   }
-  ${getFont};
-  ${getColors};
+  ${getFontStyles}
+  ${getColorStyles}
 `;

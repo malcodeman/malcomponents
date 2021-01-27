@@ -11,8 +11,11 @@ export default { title: "Input", decorators: [withKnobs] };
 
 export function Default() {
   const [value, setValue] = React.useState("");
-  const size = select("Size", Object.values(SIZE), SIZE.default);
-  const darkTheme = boolean("Dark theme", false);
+  const inputSize = select("inputSize", Object.values(SIZE), SIZE.default);
+  const disabled = boolean("disabled", false);
+  const error = boolean("error", false);
+  const positive = boolean("positive", false);
+  const darkTheme = boolean("darkTheme", false);
   const theme = darkTheme ? DarkTheme : LightTheme;
 
   return (
@@ -20,7 +23,10 @@ export function Default() {
       <Input
         value={value}
         onChange={(e) => setValue(e.currentTarget.value)}
-        size={size}
+        disabled={disabled}
+        error={error}
+        positive={positive}
+        inputSize={inputSize}
       />
     </ThemeProvider>
   );
