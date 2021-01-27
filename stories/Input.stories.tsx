@@ -15,6 +15,7 @@ export function Default() {
   const disabled = boolean("disabled", false);
   const error = boolean("error", false);
   const positive = boolean("positive", false);
+  const autoFocus = boolean("autoFocus", false);
   const darkTheme = boolean("darkTheme", false);
   const theme = darkTheme ? DarkTheme : LightTheme;
 
@@ -23,10 +24,11 @@ export function Default() {
       <Input
         value={value}
         onChange={(e) => setValue(e.currentTarget.value)}
+        inputSize={inputSize}
         disabled={disabled}
         error={error}
         positive={positive}
-        inputSize={inputSize}
+        autoFocus={autoFocus}
       />
     </ThemeProvider>
   );

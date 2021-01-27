@@ -10,14 +10,17 @@ import { KIND } from "../src/notification/constants";
 export default { title: "Notification", decorators: [withKnobs] };
 
 export function Default() {
-  const value = text("Value", "Notification");
-  const kind = select("Kind", Object.values(KIND), KIND.info);
-  const darkTheme = boolean("Dark theme", false);
+  const value = text("value", "Notification");
+  const kind = select("kind", Object.values(KIND), KIND.info);
+  const shouldFitContainer = boolean("shouldFitContainer", false);
+  const darkTheme = boolean("darkTheme", false);
   const theme = darkTheme ? DarkTheme : LightTheme;
 
   return (
     <ThemeProvider theme={theme}>
-      <Notification kind={kind}>{value}</Notification>
+      <Notification kind={kind} shouldFitContainer={shouldFitContainer}>
+        {value}
+      </Notification>
     </ThemeProvider>
   );
 }

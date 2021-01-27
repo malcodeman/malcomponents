@@ -29,6 +29,7 @@ function Input(props: props) {
     disabled = false,
     error = false,
     positive = false,
+    autoFocus = false,
     onChange = () => {},
     onBlur = () => {},
   } = props;
@@ -42,6 +43,7 @@ function Input(props: props) {
       disabled={disabled}
       error={error}
       positive={positive}
+      autoFocus={autoFocus}
       onChange={onChange}
       onBlur={onBlur}
     />

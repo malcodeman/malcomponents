@@ -1,66 +1,65 @@
 import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 
-import { KIND } from "./constants";
+import { kind } from "./constants";
 
-function getBackgroundColor(props) {
+function getBackgroundColorStyles(props: { kind: kind; theme: DefaultTheme }) {
   const { kind } = props;
 
   switch (kind) {
     default:
-    case KIND.info:
+    case "info":
       return props.theme.malcode?.colors.notificationInfoBackground;
-    case KIND.positive:
+    case "positive":
       return props.theme.malcode?.colors.notificationPositiveBackground;
-    case KIND.warning:
+    case "warning":
       return props.theme.malcode?.colors.notificationWarningBackground;
-    case KIND.negative:
+    case "negative":
       return props.theme.malcode?.colors.notificationNegativeBackground;
   }
 }
 
-function getColor(props) {
+function getColorStyles(props: { kind: kind; theme: DefaultTheme }) {
   const { kind } = props;
 
   switch (kind) {
     default:
-    case KIND.info:
+    case "info":
       return props.theme.malcode?.colors.notificationInfoText;
-    case KIND.positive:
+    case "positive":
       return props.theme.malcode?.colors.notificationPositiveText;
-    case KIND.warning:
+    case "warning":
       return props.theme.malcode?.colors.notificationWarningText;
-    case KIND.negative:
+    case "negative":
       return props.theme.malcode?.colors.notificationNegativeText;
   }
 }
 
-const StyledNofitication = styled.div<{ kind: string }>`
+const StyledNofitication = styled.div<{
+  kind: kind;
+  shouldFitContainer: boolean;
+}>`
   padding: 1rem;
-  background-color: ${getBackgroundColor};
-  color: ${getColor};
+  width: ${(props) => (props.shouldFitContainer ? "100%" : "18rem")};
+  background-color: ${getBackgroundColorStyles};
+  color: ${getColorStyles};
   ${(props) => props.theme.malcode?.typography.font250}
 `;
 
-function Notification(props) {
-  const { kind, children } = props;
+type props = {
+  kind?: kind;
+  shouldFitContainer?: boolean;
+  children?: React.ReactNode;
+};
 
-  return <StyledNofitication kind={kind}>{children}</StyledNofitication>;
+function Notification(props: props) {
+  const { kind = "info", shouldFitContainer = false, children } = props;
+
+  return (
+    <StyledNofitication kind={kind} shouldFitContainer={shouldFitContainer}>
+      {children}
+    </StyledNofitication>
+  );
 }
-
-Notification.propTypes = {
-  kind: PropTypes.oneOf([
-    KIND.info,
-    KIND.positive,
-    KIND.warning,
-    KIND.negative,
-  ]),
-  children: PropTypes.node,
-};
-
-Notification.defaultProps = {
-  kind: KIND.info,
-};
 
 export default Notification;
