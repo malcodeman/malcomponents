@@ -9,10 +9,10 @@ import Spinner from "../src/spinner/Spinner";
 export default { title: "Spinner", decorators: [withKnobs] };
 
 export function Default() {
-  const size = text("Size", "1rem");
-  const darkTheme = boolean("Dark theme", false);
+  const size = text("size", "1rem");
+  const darkTheme = boolean("darkTheme", false);
   const color = text(
-    "Color",
+    "color",
     darkTheme ? DarkTheme.colors.accent : LightTheme.colors.accent
   );
   const theme = darkTheme ? DarkTheme : LightTheme;

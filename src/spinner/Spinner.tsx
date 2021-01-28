@@ -1,6 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, useTheme } from "styled-components";
 
 const rotate = keyframes`
   from {
@@ -15,29 +14,24 @@ const StyledSpinner = styled.div<{ size: string }>`
   animation: ${rotate} 1s linear infinite;
   border-radius: 50%;
   border-left: 2px solid transparent;
-  border-top: 2px solid
-    ${(props) => props.color || props.theme.malcode?.colors.accent};
-  border-right: 2px solid
-    ${(props) => props.color || props.theme.malcode?.colors.accent};
-  border-bottom: 2px solid
-    ${(props) => props.color || props.theme.malcode?.colors.accent};
+  cursor: wait;
+  border-top: 2px solid ${(props) => props.color};
+  border-right: 2px solid ${(props) => props.color};
+  border-bottom: 2px solid ${(props) => props.color};
   height: ${(props) => props.size};
   width: ${(props) => props.size};
 `;
 
-function Spinner(props) {
-  const { color, size } = props;
+type props = {
+  color?: string;
+  size?: string;
+};
 
-  return <StyledSpinner color={color} size={size} {...props} />;
+function Spinner(props: props) {
+  const theme = useTheme();
+  const { color = theme.malcode.colors.accent, size = "1rem" } = props;
+
+  return <StyledSpinner {...props} color={color} size={size} />;
 }
-
-Spinner.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.string,
-};
-
-Spinner.defaultProps = {
-  size: "1rem",
-};
 
 export default Spinner;
