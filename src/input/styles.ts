@@ -8,11 +8,11 @@ function getFontStyles(props: { inputSize: size; theme: DefaultTheme }) {
   switch (inputSize) {
     default:
     case "default":
-      return props.theme.malcode?.typography.font450;
+      return props.theme.malcode?.typography.size.paragraphLarge;
     case "compact":
-      return props.theme.malcode?.typography.font350;
+      return props.theme.malcode?.typography.size.paragraphMedium;
     case "large":
-      return props.theme.malcode?.typography.font550;
+      return props.theme.malcode?.typography.size.headingXSmall;
   }
 }
 
@@ -71,6 +71,6 @@ export const getInputStyles = css<{
   ::placeholder {
     color: ${(props) => props.theme.malcode?.colors.foregroundAlt};
   }
-  ${getFontStyles}
-  ${getColorStyles}
+  font-size: ${getFontStyles};
+  ${getColorStyles};
 `;

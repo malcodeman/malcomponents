@@ -10,7 +10,7 @@ const Label = styled.label<{ disabled: boolean }>`
     props.disabled
       ? props.theme.malcode?.colors.foregroundAlt
       : props.theme.malcode?.colors.foreground};
-  ${(props) => props.theme.malcode?.typography.font250}
+  font-size: ${(props) => props.theme.malcode?.typography.size.paragraphSmall};
 `;
 
 function getColor(props: {
@@ -31,7 +31,7 @@ function getColor(props: {
 const Caption = styled.div<{ error: boolean; positive: boolean }>`
   margin: 8px 0;
   color: ${getColor};
-  ${(props) => props.theme.malcode?.typography.font100}
+  font-size: ${(props) => props.theme.malcode?.typography.size.paragraphXSmall};
 `;
 
 type props = {

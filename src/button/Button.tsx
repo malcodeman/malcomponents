@@ -10,11 +10,11 @@ function getFontStyles(props: { size: size; theme: DefaultTheme }) {
   switch (size) {
     default:
     case "default":
-      return props.theme.malcode?.typography.font450;
+      return props.theme.malcode?.typography.size.paragraphLarge;
     case "compact":
-      return props.theme.malcode?.typography.font350;
+      return props.theme.malcode?.typography.size.paragraphMedium;
     case "large":
-      return props.theme.malcode?.typography.font550;
+      return props.theme.malcode?.typography.size.headingXSmall;
   }
 }
 
@@ -73,7 +73,7 @@ const StyledButton = styled.button<{
       props.theme.malcode?.colors.buttonDisabledFill};
     color: ${(props) => props.theme.malcode?.colors.buttonDisabledText};
   }
-  ${getFontStyles};
+  font-size: ${getFontStyles};
   ${getKindStyles};
 `;
 

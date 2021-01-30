@@ -43,7 +43,7 @@ const StyledNofitication = styled.div<{
   width: ${(props) => (props.shouldFitContainer ? "100%" : "18rem")};
   background-color: ${getBackgroundColorStyles};
   color: ${getColorStyles};
-  ${(props) => props.theme.malcode?.typography.font250}
+  font-size: ${(props) => props.theme.malcode?.typography.size.paragraphSmall};
 `;
 
 type props = {

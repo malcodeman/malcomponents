@@ -5,9 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { LightTheme as defaultTheme } from "./themes";
 
 function CustomThemeProvider(props) {
-  const theme = {
-    malcode: { ...defaultTheme, ...props.theme },
-  };
+  const theme = { ...defaultTheme, ...props.theme };
 
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 }

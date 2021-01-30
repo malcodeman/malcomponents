@@ -44,26 +44,21 @@ declare module "styled-components" {
         notificationNegativeText: string;
       };
       typography: {
-        font100: string;
-        font150: string;
-        font200: string;
-        font250: string;
-        font300: string;
-        font350: string;
-        font400: string;
-        font450: string;
-        font500: string;
-        font550: string;
-        ParagraphXSmall: string;
-        ParagraphSmall: string;
-        ParagraphMedium: string;
-        ParagraphLarge: string;
-        HeadingXSmall: string;
-        HeadingSmall: string;
-        HeadingMedium: string;
-        HeadingLarge: string;
-        HeadingXLarge: string;
-        HeadingXXLarge: string;
+        type: {
+          primary: string;
+        };
+        size: {
+          paragraphXSmall: string;
+          paragraphSmall: string;
+          paragraphMedium: string;
+          paragraphLarge: string;
+          headingXSmall: string;
+          headingSmall: string;
+          headingMedium: string;
+          headingLarge: string;
+          headingXLarge: string;
+          headingXXLarge: string;
+        };
       };
     };
   }

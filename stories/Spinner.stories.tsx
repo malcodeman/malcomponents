@@ -13,7 +13,9 @@ export function Default() {
   const darkTheme = boolean("darkTheme", false);
   const color = text(
     "color",
-    darkTheme ? DarkTheme.colors.accent : LightTheme.colors.accent
+    darkTheme
+      ? DarkTheme.malcode.colors.accent
+      : LightTheme.malcode.colors.accent
   );
   const theme = darkTheme ? DarkTheme : LightTheme;
 
