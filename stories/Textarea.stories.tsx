@@ -11,8 +11,12 @@ export default { title: "Textarea", decorators: [withKnobs] };
 
 export function Default() {
   const [value, setValue] = React.useState("");
-  const size = select("Size", Object.values(SIZE), SIZE.default);
-  const darkTheme = boolean("Dark theme", false);
+  const inputSize = select("inputSize", Object.values(SIZE), SIZE.default);
+  const disabled = boolean("disabled", false);
+  const error = boolean("error", false);
+  const positive = boolean("positive", false);
+  const autoFocus = boolean("autoFocus", false);
+  const darkTheme = boolean("darkTheme", false);
   const theme = darkTheme ? DarkTheme : LightTheme;
 
   return (
@@ -20,7 +24,11 @@ export function Default() {
       <Textarea
         value={value}
         onChange={(e) => setValue(e.currentTarget.value)}
-        size={size}
+        inputSize={inputSize}
+        disabled={disabled}
+        error={error}
+        positive={positive}
+        autoFocus={autoFocus}
       />
     </ThemeProvider>
   );

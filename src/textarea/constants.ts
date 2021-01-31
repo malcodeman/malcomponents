@@ -1,1 +1,1 @@
-export { SIZE } from "../input/constants";
+export { SIZE, size } from "../input/constants";

@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { SIZE } from "./constants";
+import { size } from "./constants";
 import { getInputStyles } from "./styles";
 
 const StyledTextarea = styled.textarea`
@@ -10,49 +9,46 @@ const StyledTextarea = styled.textarea`
   ${getInputStyles};
 `;
 
-function Textarea(props) {
+type props = {
+  inputSize?: size;
+  name?: string;
+  value?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  error?: boolean;
+  positive?: boolean;
+  autoFocus?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onBlur?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+};
+
+function Textarea(props: props) {
   const {
-    size,
-    value,
-    placeholder,
-    disabled,
-    error,
-    positive,
-    onChange,
+    inputSize = "default",
+    value = "",
+    placeholder = "",
+    disabled = false,
+    error = false,
+    positive = false,
+    autoFocus = false,
+    onChange = () => {},
+    onBlur = () => {},
   } = props;
 
   return (
     <StyledTextarea
       {...props}
-      size={size}
+      inputSize={inputSize}
       value={value}
       placeholder={placeholder}
       disabled={disabled}
       error={error}
       positive={positive}
+      autoFocus={autoFocus}
       onChange={onChange}
+      onBlur={onBlur}
     />
   );
 }
-
-Textarea.propTypes = {
-  size: PropTypes.oneOf([SIZE.default, SIZE.compact, SIZE.large]),
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
-  disabled: PropTypes.bool,
-  error: PropTypes.bool,
-  positive: PropTypes.bool,
-  onChange: PropTypes.func,
-};
-
-Textarea.defaultProps = {
-  size: SIZE.default,
-  value: "",
-  placeholder: "",
-  disabled: false,
-  error: false,
-  positive: false,
-  onChange: () => {},
-};
 
 export default Textarea;
