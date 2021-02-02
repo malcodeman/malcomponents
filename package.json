@@ -8,7 +8,7 @@
     "build": "parcel build src/index.ts",
     "build-storybook": "build-storybook",
     "deploy-storybook": "build-storybook && mv storybook-static/index.html storybook-static/200.html && surge storybook-static malcomponents.surge.sh",
-    "lint": "eslint src/**"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -29,13 +29,16 @@
     "@storybook/addons": "^6.1.14",
     "@storybook/react": "^6.1.14",
     "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
     "babel-loader": "^8.2.2",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-plugin-react": "^7.22.0",
     "parcel": "^2.0.0-beta.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
