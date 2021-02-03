@@ -22,7 +22,7 @@ type props = {
   children?: React.ReactNode;
 };
 
-function ParagraphMedium(props: props) {
+function ParagraphMedium(props: props): React.ReactElement {
   const { children } = props;
 
   return <StyledParagraph {...props}>{children}</StyledParagraph>;

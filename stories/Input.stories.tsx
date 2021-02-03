@@ -9,7 +9,7 @@ import { SIZE } from "../src/input/constants";
 
 export default { title: "Input", decorators: [withKnobs] };
 
-export function Default() {
+export function Default(): React.ReactElement {
   const [value, setValue] = React.useState("");
   const inputSize = select("inputSize", Object.values(SIZE), SIZE.default);
   const disabled = boolean("disabled", false);

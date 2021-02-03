@@ -9,7 +9,7 @@ import { KIND, SIZE } from "../src/button/constants";
 
 export default { title: "Button", decorators: [withKnobs] };
 
-export function Default() {
+export function Default(): React.ReactElement {
   const kind = select("kind", Object.values(KIND), "primary");
   const size = select("size", Object.values(SIZE), SIZE.default);
   const children = text("children", "Button");

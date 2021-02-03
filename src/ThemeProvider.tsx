@@ -8,7 +8,7 @@ type props = {
   children?: React.ReactNode;
 };
 
-function CustomThemeProvider(props: props) {
+function CustomThemeProvider(props: props): React.ReactElement {
   const { children } = props;
   const theme = { ...defaultTheme, ...props.theme };
 

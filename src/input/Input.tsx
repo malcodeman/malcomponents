@@ -21,7 +21,7 @@ type props = {
   onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-function Input(props: props) {
+function Input(props: props): React.ReactElement {
   const {
     inputSize = "default",
     value = "",
@@ -30,8 +30,8 @@ function Input(props: props) {
     error = false,
     positive = false,
     autoFocus = false,
-    onChange = () => {},
-    onBlur = () => {},
+    onChange = () => undefined,
+    onBlur = () => undefined,
   } = props;
 
   return (

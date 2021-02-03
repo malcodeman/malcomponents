@@ -22,7 +22,7 @@ type props = {
   children?: React.ReactNode;
 };
 
-function HeadingXXLarge(props: props) {
+function HeadingXXLarge(props: props): React.ReactElement {
   const { children } = props;
 
   return <StyledHeading {...props}>{children}</StyledHeading>;

@@ -88,7 +88,7 @@ type props = {
   onClick?: () => void;
 };
 
-function Button(props: props) {
+function Button(props: props): React.ReactElement {
   const {
     kind = "primary",
     size = "default",
@@ -97,7 +97,7 @@ function Button(props: props) {
     isSelected = false,
     shouldFitContainer = false,
     children,
-    onClick = () => {},
+    onClick = () => undefined,
   } = props;
 
   function internalOnClick() {

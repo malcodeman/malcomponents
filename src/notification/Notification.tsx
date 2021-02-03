@@ -52,7 +52,7 @@ type props = {
   children?: React.ReactNode;
 };
 
-function Notification(props: props) {
+function Notification(props: props): React.ReactElement {
   const { kind = "info", shouldFitContainer = false, children } = props;
 
   return (

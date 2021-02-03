@@ -8,7 +8,7 @@ import Spinner from "../src/spinner/Spinner";
 
 export default { title: "Spinner", decorators: [withKnobs] };
 
-export function Default() {
+export function Default(): React.ReactElement {
   const size = text("size", "1rem");
   const darkTheme = boolean("darkTheme", false);
   const color = text(

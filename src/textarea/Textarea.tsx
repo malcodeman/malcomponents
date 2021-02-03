@@ -22,7 +22,7 @@ type props = {
   onBlur?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
-function Textarea(props: props) {
+function Textarea(props: props): React.ReactElement {
   const {
     inputSize = "default",
     value = "",
@@ -31,8 +31,8 @@ function Textarea(props: props) {
     error = false,
     positive = false,
     autoFocus = false,
-    onChange = () => {},
-    onBlur = () => {},
+    onChange = () => undefined,
+    onBlur = () => undefined,
   } = props;
 
   return (

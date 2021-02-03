@@ -9,7 +9,7 @@ import Input from "../src/input/Input";
 
 export default { title: "FormControl", decorators: [withKnobs] };
 
-export function Default() {
+export function Default(): React.ReactElement {
   const [value, setValue] = React.useState("");
   const label = text("label", "Your email");
   const caption = text("caption", "");

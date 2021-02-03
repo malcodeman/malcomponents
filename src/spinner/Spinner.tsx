@@ -27,7 +27,7 @@ type props = {
   size?: string;
 };
 
-function Spinner(props: props) {
+function Spinner(props: props): React.ReactElement {
   const theme = useTheme();
   const { color = theme.malcode.colors.accent, size = "1rem" } = props;
 

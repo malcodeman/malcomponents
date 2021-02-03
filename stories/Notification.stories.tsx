@@ -9,7 +9,7 @@ import { KIND } from "../src/notification/constants";
 
 export default { title: "Notification", decorators: [withKnobs] };
 
-export function Default() {
+export function Default(): React.ReactElement {
   const value = text("value", "Notification");
   const kind = select("kind", Object.values(KIND), KIND.info);
   const shouldFitContainer = boolean("shouldFitContainer", false);

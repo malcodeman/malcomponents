@@ -44,7 +44,7 @@ type props = {
   children?: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
 };
 
-function FormControl(props: props) {
+function FormControl(props: props): React.ReactElement {
   const {
     label = "",
     htmlFor = "",

@@ -22,7 +22,7 @@ type props = {
   children?: React.ReactNode;
 };
 
-function ParagraphXSmall(props: props) {
+function ParagraphXSmall(props: props): React.ReactElement {
   const { children } = props;
 
   return <StyledParagraph {...props}>{children}</StyledParagraph>;

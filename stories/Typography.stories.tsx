@@ -8,7 +8,7 @@ import Typography from "../src/typography";
 
 export default { title: "Typography", decorators: [withKnobs] };
 
-export function ParagraphXSmall() {
+export function ParagraphXSmall(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -23,7 +23,7 @@ export function ParagraphXSmall() {
   );
 }
 
-export function ParagraphSmall() {
+export function ParagraphSmall(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -38,7 +38,7 @@ export function ParagraphSmall() {
   );
 }
 
-export function ParagraphMedium() {
+export function ParagraphMedium(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -53,7 +53,7 @@ export function ParagraphMedium() {
   );
 }
 
-export function ParagraphLarge() {
+export function ParagraphLarge(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -68,7 +68,7 @@ export function ParagraphLarge() {
   );
 }
 
-export function HeadingXSmall() {
+export function HeadingXSmall(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -83,7 +83,7 @@ export function HeadingXSmall() {
   );
 }
 
-export function HeadingSmall() {
+export function HeadingSmall(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -98,7 +98,7 @@ export function HeadingSmall() {
   );
 }
 
-export function HeadingMedium() {
+export function HeadingMedium(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -113,7 +113,7 @@ export function HeadingMedium() {
   );
 }
 
-export function HeadingLarge() {
+export function HeadingLarge(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -128,7 +128,7 @@ export function HeadingLarge() {
   );
 }
 
-export function HeadingXLarge() {
+export function HeadingXLarge(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);
@@ -143,7 +143,7 @@ export function HeadingXLarge() {
   );
 }
 
-export function HeadingXXLarge() {
+export function HeadingXXLarge(): React.ReactElement {
   const mt = text("mt", "0rem");
   const mb = text("mb", "0rem");
   const darkTheme = boolean("darkTheme", false);

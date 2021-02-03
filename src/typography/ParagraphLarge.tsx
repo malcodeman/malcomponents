@@ -22,7 +22,7 @@ type props = {
   children?: React.ReactNode;
 };
 
-function ParagraphLarge(props: props) {
+function ParagraphLarge(props: props): React.ReactElement {
   const { children } = props;
 
   return <StyledParagraph {...props}>{children}</StyledParagraph>;
