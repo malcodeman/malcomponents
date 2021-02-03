@@ -7,3 +7,4 @@ export { default as Notification } from "./notification/Notification";
 export { default as Spinner } from "./spinner/Spinner";
 export { default as Textarea } from "./textarea/Textarea";
 export { default as Typography } from "./typography";
+export { default as GlobalStyle } from "./GlobalStyle";
