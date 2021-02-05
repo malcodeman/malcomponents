@@ -4,8 +4,8 @@ import { withKnobs, select, text, boolean } from "@storybook/addon-knobs";
 import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
-import Button from "../src/button/Button";
-import { KIND, SIZE } from "../src/button/constants";
+import Button from "../src/components/button/Button";
+import { KIND, SIZE } from "../src/components/button/constants";
 
 export default { title: "Button", decorators: [withKnobs] };
 

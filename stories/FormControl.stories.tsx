@@ -4,8 +4,8 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
-import FormControl from "../src/form-control/FormControl";
-import Input from "../src/input/Input";
+import FormControl from "../src/components/form-control/FormControl";
+import Input from "../src/components/input/Input";
 
 export default { title: "FormControl", decorators: [withKnobs] };
 

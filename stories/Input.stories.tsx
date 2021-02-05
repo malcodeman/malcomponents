@@ -4,8 +4,8 @@ import { withKnobs, select, boolean } from "@storybook/addon-knobs";
 import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
-import Input from "../src/input/Input";
-import { SIZE } from "../src/input/constants";
+import Input from "../src/components/input/Input";
+import { SIZE } from "../src/components/input/constants";
 
 export default { title: "Input", decorators: [withKnobs] };
 

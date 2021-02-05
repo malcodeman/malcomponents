@@ -4,8 +4,8 @@ import { withKnobs, select, text, boolean } from "@storybook/addon-knobs";
 import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
-import Notification from "../src/notification/Notification";
-import { KIND } from "../src/notification/constants";
+import Notification from "../src/components/notification/Notification";
+import { KIND } from "../src/components/notification/constants";
 
 export default { title: "Notification", decorators: [withKnobs] };
 
