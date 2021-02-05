@@ -15,18 +15,23 @@ yarn add malcomponents
 
 ```jsx
 import React from "react";
-import { ThemeProvider, LightTheme, Button } from "malcomponents";
+import { ThemeProvider, LightTheme, Button, GlobalStyle } from "malcomponents";
 
 function App() {
   return (
     <ThemeProvider theme={LightTheme}>
       <Button>Button</Button>
+      <GlobalStyle />
     </ThemeProvider>
   );
 }
 
 export default App;
 ```
+
+## Global styles
+
+Components within the design system assume that a set of global styles have been configured.
 
 ## Theming
 
@@ -35,27 +40,19 @@ We provide two themes out of the box, LightTheme and DarkTheme, which style comp
 
 ```jsx
 import React from "react";
-import { ThemeProvider, DarkTheme, Button } from "malcomponents";
+import { ThemeProvider, DarkTheme, Button, GlobalStyle } from "malcomponents";
 
 function App() {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Button>Button</Button>
+      <GlobalStyle />
     </ThemeProvider>
   );
 }
 
 export default App;
 ```
-
-## Components
-
-- [`Button`](./docs/Button.md)
-- [`FormControl`](./docs/FormControl.md)
-- [`Input`](./docs/Input.md)
-- [`Notification`](./docs/Notification.md)
-- [`Spinner`](./docs/Spinner.md)
-- [`Textarea`](./docs/Textarea.md)
 
 ## License
 
