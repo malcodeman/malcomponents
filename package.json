@@ -1,8 +1,9 @@
 {
   "name": "malcomponents",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "start-storybook",
     "build": "parcel build src/index.ts",
