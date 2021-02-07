@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import { size } from "./constants";
-import { getInputStyles } from "./styles";
+import { size } from "../input/constants";
+import { getInputStyles } from "../input/styles";
 
 const StyledTextarea = styled.textarea`
   resize: none;

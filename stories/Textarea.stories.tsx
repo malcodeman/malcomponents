@@ -5,7 +5,7 @@ import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/ThemeProvider";
 import Textarea from "../src/components/textarea/Textarea";
-import { SIZE } from "../src/components/textarea/constants";
+import { SIZE } from "../src/components/input/constants";
 
 export default { title: "Textarea", decorators: [withKnobs] };
 
