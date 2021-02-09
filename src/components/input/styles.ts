@@ -8,11 +8,11 @@ function getFontStyles(props: { inputSize: size; theme: DefaultTheme }) {
   switch (inputSize) {
     default:
     case "default":
-      return props.theme.malcode?.typography.size.paragraphLarge;
+      return props.theme.malcode.typography.size.paragraphLarge;
     case "compact":
-      return props.theme.malcode?.typography.size.paragraphMedium;
+      return props.theme.malcode.typography.size.paragraphMedium;
     case "large":
-      return props.theme.malcode?.typography.size.headingXSmall;
+      return props.theme.malcode.typography.size.headingXSmall;
   }
 }
 
@@ -21,24 +21,23 @@ function getColorStyles(props: { error: boolean; positive: boolean }) {
 
   if (error) {
     return css`
-      color: ${(props) => props.theme.malcode?.colors.foreground};
-      border-color: ${(props) => props.theme.malcode?.colors.inputBorderError};
-      background-color: ${(props) =>
-        props.theme.malcode?.colors.inputFillError};
+      color: ${(props) => props.theme.malcode.colors.foreground};
+      border-color: ${(props) => props.theme.malcode.colors.inputBorderError};
+      background-color: ${(props) => props.theme.malcode.colors.inputFillError};
     `;
   } else if (positive) {
     return css`
-      color: ${(props) => props.theme.malcode?.colors.foreground};
+      color: ${(props) => props.theme.malcode.colors.foreground};
       border-color: ${(props) =>
-        props.theme.malcode?.colors.inputBorderPositive};
+        props.theme.malcode.colors.inputBorderPositive};
       background-color: ${(props) =>
-        props.theme.malcode?.colors.inputFillPositive};
+        props.theme.malcode.colors.inputFillPositive};
     `;
   }
   return css`
-    color: ${(props) => props.theme.malcode?.colors.foreground};
-    border-color: ${(props) => props.theme.malcode?.colors.inputFill};
-    background-color: ${(props) => props.theme.malcode?.colors.inputFill};
+    color: ${(props) => props.theme.malcode.colors.foreground};
+    border-color: ${(props) => props.theme.malcode.colors.inputFill};
+    background-color: ${(props) => props.theme.malcode.colors.inputFill};
   `;
 }
 
@@ -56,20 +55,20 @@ export const getInputStyles = css<{
   :disabled {
     cursor: not-allowed;
     background-color: ${(props) =>
-      props.theme.malcode?.colors.inputFillDisabled};
-    border-color: ${(props) => props.theme.malcode?.colors.inputFillDisabled};
-    color: ${(props) => props.theme.malcode?.colors.inputTextDisabled};
+      props.theme.malcode.colors.inputFillDisabled};
+    border-color: ${(props) => props.theme.malcode.colors.inputFillDisabled};
+    color: ${(props) => props.theme.malcode.colors.inputTextDisabled};
   }
   :disabled::placeholder {
-    color: ${(props) => props.theme.malcode?.colors.inputTextDisabled};
+    color: ${(props) => props.theme.malcode.colors.inputTextDisabled};
   }
   :focus {
-    background-color: ${(props) => props.theme.malcode?.colors.inputFillActive};
-    border-color: ${(props) => props.theme.malcode?.colors.borderFocus};
-    color: ${(props) => props.theme.malcode?.colors.foreground};
+    background-color: ${(props) => props.theme.malcode.colors.inputFillActive};
+    border-color: ${(props) => props.theme.malcode.colors.borderFocus};
+    color: ${(props) => props.theme.malcode.colors.foreground};
   }
   ::placeholder {
-    color: ${(props) => props.theme.malcode?.colors.foregroundAlt};
+    color: ${(props) => props.theme.malcode.colors.foregroundAlt};
   }
   font-size: ${getFontStyles};
   ${getColorStyles};

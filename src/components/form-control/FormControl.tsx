@@ -8,9 +8,9 @@ const Label = styled.label<{ disabled: boolean }>`
   margin: 8px 0;
   color: ${(props) =>
     props.disabled
-      ? props.theme.malcode?.colors.foregroundAlt
-      : props.theme.malcode?.colors.foreground};
-  font-size: ${(props) => props.theme.malcode?.typography.size.paragraphSmall};
+      ? props.theme.malcode.colors.foregroundAlt
+      : props.theme.malcode.colors.foreground};
+  font-size: ${(props) => props.theme.malcode.typography.size.paragraphSmall};
 `;
 
 function getColor(props: {
@@ -21,17 +21,17 @@ function getColor(props: {
   const { error, positive } = props;
 
   if (error) {
-    return props.theme.malcode?.colors.negative;
+    return props.theme.malcode.colors.negative;
   } else if (positive) {
-    return props.theme.malcode?.colors.positive;
+    return props.theme.malcode.colors.positive;
   }
-  return props.theme.malcode?.colors.foregroundAlt;
+  return props.theme.malcode.colors.foregroundAlt;
 }
 
 const Caption = styled.div<{ error: boolean; positive: boolean }>`
   margin: 8px 0;
   color: ${getColor};
-  font-size: ${(props) => props.theme.malcode?.typography.size.paragraphXSmall};
+  font-size: ${(props) => props.theme.malcode.typography.size.paragraphXSmall};
 `;
 
 type props = {

@@ -9,13 +9,13 @@ function getBackgroundColorStyles(props: { kind: kind; theme: DefaultTheme }) {
   switch (kind) {
     default:
     case "info":
-      return props.theme.malcode?.colors.notificationInfoBackground;
+      return props.theme.malcode.colors.notificationInfoBackground;
     case "positive":
-      return props.theme.malcode?.colors.notificationPositiveBackground;
+      return props.theme.malcode.colors.notificationPositiveBackground;
     case "warning":
-      return props.theme.malcode?.colors.notificationWarningBackground;
+      return props.theme.malcode.colors.notificationWarningBackground;
     case "negative":
-      return props.theme.malcode?.colors.notificationNegativeBackground;
+      return props.theme.malcode.colors.notificationNegativeBackground;
   }
 }
 
@@ -25,13 +25,13 @@ function getColorStyles(props: { kind: kind; theme: DefaultTheme }) {
   switch (kind) {
     default:
     case "info":
-      return props.theme.malcode?.colors.notificationInfoText;
+      return props.theme.malcode.colors.notificationInfoText;
     case "positive":
-      return props.theme.malcode?.colors.notificationPositiveText;
+      return props.theme.malcode.colors.notificationPositiveText;
     case "warning":
-      return props.theme.malcode?.colors.notificationWarningText;
+      return props.theme.malcode.colors.notificationWarningText;
     case "negative":
-      return props.theme.malcode?.colors.notificationNegativeText;
+      return props.theme.malcode.colors.notificationNegativeText;
   }
 }
 
@@ -43,7 +43,7 @@ const StyledNofitication = styled.div<{
   width: ${(props) => (props.shouldFitContainer ? "100%" : "18rem")};
   background-color: ${getBackgroundColorStyles};
   color: ${getColorStyles};
-  font-size: ${(props) => props.theme.malcode?.typography.size.paragraphSmall};
+  font-size: ${(props) => props.theme.malcode.typography.size.paragraphSmall};
 `;
 
 type props = {
