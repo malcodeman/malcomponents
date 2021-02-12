@@ -62,6 +62,7 @@ const StyledButton = styled.button<{
 }>`
   display: inline-flex;
   justify-content: center;
+  align-items: center;
   border: 0;
   cursor: pointer;
   outline: 0;
