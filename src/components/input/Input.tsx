@@ -11,7 +11,6 @@ const StyledInput = styled.input`
 type props = {
   inputSize?: size;
   name?: string;
-  value?: string;
   placeholder?: string;
   disabled?: boolean;
   error?: boolean;
@@ -21,10 +20,9 @@ type props = {
   onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-function Input(props: props): React.ReactElement {
+function Input(props: props, ref: React.ForwardedRef<HTMLInputElement>): any {
   const {
     inputSize = "default",
-    value = "",
     placeholder = "",
     disabled = false,
     error = false,
@@ -37,8 +35,8 @@ function Input(props: props): React.ReactElement {
   return (
     <StyledInput
       {...props}
+      ref={ref}
       inputSize={inputSize}
-      value={value}
       placeholder={placeholder}
       disabled={disabled}
       error={error}
@@ -50,4 +48,4 @@ function Input(props: props): React.ReactElement {
   );
 }
 
-export default Input;
+export default React.forwardRef(Input);
