@@ -89,7 +89,10 @@ type props = {
   onClick?: () => void;
 };
 
-function Button(props: props): React.ReactElement {
+function Button(
+  props: props,
+  ref: React.ForwardedRef<HTMLButtonElement>
+): React.ReactElement {
   const {
     kind = "primary",
     size = "default",
@@ -110,6 +113,7 @@ function Button(props: props): React.ReactElement {
   return (
     <StyledButton
       {...props}
+      ref={ref}
       kind={kind}
       size={size}
       disabled={disabled}
@@ -122,4 +126,4 @@ function Button(props: props): React.ReactElement {
   );
 }
 
-export default Button;
+export default React.forwardRef(Button);

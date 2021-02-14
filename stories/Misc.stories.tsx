@@ -29,3 +29,20 @@ export function ReactHookForm(): React.ReactElement {
     </ThemeProvider>
   );
 }
+
+export function ButtonRef(): React.ReactElement {
+  const darkTheme = boolean("darkTheme", false);
+  const theme = darkTheme ? DarkTheme : LightTheme;
+  const ref: React.Ref<HTMLButtonElement> = React.createRef();
+
+  function handleOnClick() {
+    console.log(ref);
+  }
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Button ref={ref}>Ref button</Button>
+      <Button onClick={handleOnClick}>Click</Button>
+    </ThemeProvider>
+  );
+}
