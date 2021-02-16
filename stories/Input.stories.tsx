@@ -5,13 +5,16 @@ import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Input from "../src/components/input/Input";
-import { SIZE } from "../src/components/input/constants";
 
 export default { title: "Input", decorators: [withKnobs] };
 
 export function Default(): React.ReactElement {
   const [value, setValue] = React.useState("");
-  const inputSize = select("inputSize", Object.values(SIZE), SIZE.default);
+  const inputSize = select(
+    "inputSize",
+    ["default", "compact", "large"],
+    "default"
+  );
   const disabled = boolean("disabled", false);
   const error = boolean("error", false);
   const positive = boolean("positive", false);

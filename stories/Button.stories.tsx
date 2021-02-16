@@ -5,13 +5,12 @@ import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Button from "../src/components/button/Button";
-import { KIND, SIZE } from "../src/components/button/constants";
 
 export default { title: "Button", decorators: [withKnobs] };
 
 export function Default(): React.ReactElement {
-  const kind = select("kind", Object.values(KIND), "primary");
-  const size = select("size", Object.values(SIZE), SIZE.default);
+  const kind = select("kind", ["primary", "secondary"], "primary");
+  const size = select("size", ["default", "compact", "large"], "default");
   const children = text("children", "Button");
   const darkTheme = boolean("darkTheme", false);
   const isLoading = boolean("isLoading", false);

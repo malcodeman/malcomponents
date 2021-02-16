@@ -5,13 +5,16 @@ import { DarkTheme, LightTheme } from "../src/themes";
 
 import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Notification from "../src/components/notification/Notification";
-import { KIND } from "../src/components/notification/constants";
 
 export default { title: "Notification", decorators: [withKnobs] };
 
 export function Default(): React.ReactElement {
   const value = text("value", "Notification");
-  const kind = select("kind", Object.values(KIND), KIND.info);
+  const kind = select(
+    "kind",
+    ["info", "positive", "warning", "negative"],
+    "info"
+  );
   const shouldFitContainer = boolean("shouldFitContainer", false);
   const darkTheme = boolean("darkTheme", false);
   const theme = darkTheme ? DarkTheme : LightTheme;
