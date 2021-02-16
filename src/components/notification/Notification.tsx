@@ -1,9 +1,12 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
 
-import { kind } from "./constants";
+import { notificationProps, notificationKind } from "../../types";
 
-function getBackgroundColorStyles(props: { kind: kind; theme: DefaultTheme }) {
+function getBackgroundColorStyles(props: {
+  kind: notificationKind;
+  theme: DefaultTheme;
+}) {
   const { kind } = props;
 
   switch (kind) {
@@ -19,7 +22,10 @@ function getBackgroundColorStyles(props: { kind: kind; theme: DefaultTheme }) {
   }
 }
 
-function getColorStyles(props: { kind: kind; theme: DefaultTheme }) {
+function getColorStyles(props: {
+  kind: notificationKind;
+  theme: DefaultTheme;
+}) {
   const { kind } = props;
 
   switch (kind) {
@@ -36,7 +42,7 @@ function getColorStyles(props: { kind: kind; theme: DefaultTheme }) {
 }
 
 const StyledNofitication = styled.div<{
-  kind: kind;
+  kind: notificationKind;
   shouldFitContainer: boolean;
 }>`
   padding: 1rem;
@@ -46,13 +52,7 @@ const StyledNofitication = styled.div<{
   font-size: ${(props) => props.theme.malcode.typography.size.paragraphSmall};
 `;
 
-type props = {
-  kind?: kind;
-  shouldFitContainer?: boolean;
-  children?: React.ReactNode;
-};
-
-function Notification(props: props): React.ReactElement {
+function Notification(props: notificationProps): React.ReactElement {
   const { kind = "info", shouldFitContainer = false, children } = props;
 
   return (

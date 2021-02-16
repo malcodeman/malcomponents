@@ -3,7 +3,7 @@ import { withKnobs, select, text, boolean } from "@storybook/addon-knobs";
 
 import { DarkTheme, LightTheme } from "../src/themes";
 
-import ThemeProvider from "../src/ThemeProvider";
+import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Notification from "../src/components/notification/Notification";
 import { KIND } from "../src/components/notification/constants";
 

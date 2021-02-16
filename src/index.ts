@@ -1,11 +1,16 @@
 export { DarkTheme, LightTheme } from "./themes";
-export { default as ThemeProvider } from "./ThemeProvider";
 export { default as Button } from "./components/button/Button";
 export { default as FormControl } from "./components/form-control/FormControl";
 export { default as Input } from "./components/input/Input";
+export { default as Modal } from "./components/modal/Modal";
+export { default as ModalBody } from "./components/modal/ModalBody";
+export { default as ModalButton } from "./components/modal/ModalButton";
+export { default as ModalFooter } from "./components/modal/ModalFooter";
+export { default as ModalHeader } from "./components/modal/ModalHeader";
 export { default as Notification } from "./components/notification/Notification";
 export { default as Spinner } from "./components/spinner/Spinner";
 export { default as Textarea } from "./components/textarea/Textarea";
+export { default as ThemeProvider } from "./components/theme-provider/ThemeProvider";
 export { default as Typography } from "./components/typography";
 export { default as ParagraphXSmall } from "./components/typography/ParagraphXSmall";
 export { default as ParagraphSmall } from "./components/typography/ParagraphSmall";

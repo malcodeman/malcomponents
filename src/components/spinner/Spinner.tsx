@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { keyframes, useTheme } from "styled-components";
 
+import { spinnerProps } from "../../types";
+
 const rotate = keyframes`
   from {
     transform: rotate(0deg);
@@ -22,12 +24,7 @@ const StyledSpinner = styled.div<{ size: string }>`
   width: ${(props) => props.size};
 `;
 
-type props = {
-  color?: string;
-  size?: string;
-};
-
-function Spinner(props: props): React.ReactElement {
+function Spinner(props: spinnerProps): React.ReactElement {
   const theme = useTheme();
   const { color = theme.malcode.colors.accent, size = "1rem" } = props;
 

@@ -3,7 +3,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
 import { DarkTheme, LightTheme } from "../src/themes";
 
-import ThemeProvider from "../src/ThemeProvider";
+import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Typography from "../src/components/typography";
 
 export default { title: "Typography", decorators: [withKnobs] };

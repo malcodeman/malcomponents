@@ -7,6 +7,3 @@ export const SIZE = {
   compact: "compact",
   large: "large",
 } as const;
-
-export declare type kind = "primary" | "secondary";
-export declare type size = "default" | "compact" | "large";

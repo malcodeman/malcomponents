@@ -3,5 +3,3 @@ export const SIZE = {
   compact: "compact",
   large: "large",
 } as const;
-
-export declare type size = "default" | "compact" | "large";

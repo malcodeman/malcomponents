@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+import { typographyProps } from "../../types";
+
 const StyledParagraph = styled.p<{ mt?: string; mb?: string }>`
   color: ${(props) => props.theme.malcode.colors.contentPrimary};
   font-size: ${(props) => props.theme.malcode.typography.size.paragraphXSmall};
@@ -16,13 +18,7 @@ const StyledParagraph = styled.p<{ mt?: string; mb?: string }>`
     `}
 `;
 
-type props = {
-  mt?: string;
-  mb?: string;
-  children?: React.ReactNode;
-};
-
-function ParagraphXSmall(props: props): React.ReactElement {
+function ParagraphXSmall(props: typographyProps): React.ReactElement {
   const { children } = props;
 
   return <StyledParagraph {...props}>{children}</StyledParagraph>;

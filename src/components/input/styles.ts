@@ -1,8 +1,8 @@
 import { css, DefaultTheme } from "styled-components";
 
-import { size } from "./constants";
+import { inputSize } from "../../types";
 
-function getFontStyles(props: { inputSize: size; theme: DefaultTheme }) {
+function getFontStyles(props: { inputSize: inputSize; theme: DefaultTheme }) {
   const { inputSize } = props;
 
   switch (inputSize) {
@@ -42,7 +42,7 @@ function getColorStyles(props: { error: boolean; positive: boolean }) {
 }
 
 export const getInputStyles = css<{
-  inputSize: size;
+  inputSize: inputSize;
   error: boolean;
   positive: boolean;
 }>`

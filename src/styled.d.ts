@@ -42,6 +42,7 @@ declare module "styled-components" {
         notificationWarningText: string;
         notificationNegativeBackground: string;
         notificationNegativeText: string;
+        modalCloseColor: string;
       };
       typography: {
         type: {

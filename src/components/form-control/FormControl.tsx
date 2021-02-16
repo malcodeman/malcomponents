@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
 
+import { formControlProps } from "../../types";
+
 const StyledFormControl = styled.div``;
 
 const Label = styled.label<{ disabled: boolean }>`
@@ -34,17 +36,7 @@ const Caption = styled.div<{ error: boolean; positive: boolean }>`
   font-size: ${(props) => props.theme.malcode.typography.size.paragraphXSmall};
 `;
 
-type props = {
-  label?: string;
-  htmlFor?: string;
-  caption?: string;
-  disabled?: boolean;
-  error?: boolean;
-  positive?: boolean;
-  children?: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
-};
-
-function FormControl(props: props): React.ReactElement {
+function FormControl(props: formControlProps): React.ReactElement {
   const {
     label = "",
     htmlFor = "",
@@ -62,7 +54,12 @@ function FormControl(props: props): React.ReactElement {
           {label}
         </Label>
       )}
-      {React.cloneElement(children, { disabled, error, positive })}
+      {React.cloneElement(children, {
+        ...children.props,
+        disabled,
+        error,
+        positive,
+      })}
       {caption && (
         <Caption error={error} positive={positive}>
           {caption}

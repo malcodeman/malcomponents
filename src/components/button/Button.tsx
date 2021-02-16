@@ -1,10 +1,10 @@
 import React from "react";
 import styled, { css, DefaultTheme } from "styled-components";
 
+import { buttonProps, buttonSize, buttonKind } from "../../types";
 import Spinner from "../spinner/Spinner";
-import { kind, size } from "./constants";
 
-function getFontStyles(props: { size: size; theme: DefaultTheme }) {
+function getFontStyles(props: { size: buttonSize; theme: DefaultTheme }) {
   const { size } = props;
 
   switch (size) {
@@ -19,7 +19,7 @@ function getFontStyles(props: { size: size; theme: DefaultTheme }) {
 }
 
 function getKindStyles(props: {
-  kind: kind;
+  kind: buttonKind;
   isSelected: boolean;
   theme: DefaultTheme;
 }) {
@@ -55,8 +55,8 @@ function getKindStyles(props: {
 }
 
 const StyledButton = styled.button<{
-  kind: kind;
-  size: size;
+  kind: buttonKind;
+  size: buttonSize;
   isSelected: boolean;
   shouldFitContainer: boolean;
 }>`
@@ -78,21 +78,7 @@ const StyledButton = styled.button<{
   ${getKindStyles};
 `;
 
-type props = {
-  kind?: kind;
-  size?: size;
-  disabled?: boolean;
-  isLoading?: boolean;
-  isSelected?: boolean;
-  shouldFitContainer?: boolean;
-  children?: React.ReactNode;
-  onClick?: () => void;
-};
-
-function Button(
-  props: props,
-  ref: React.ForwardedRef<HTMLButtonElement>
-): React.ReactElement {
+function Button(props: buttonProps): React.ReactElement {
   const {
     kind = "primary",
     size = "default",
@@ -113,7 +99,6 @@ function Button(
   return (
     <StyledButton
       {...props}
-      ref={ref}
       kind={kind}
       size={size}
       disabled={disabled}
@@ -126,4 +111,4 @@ function Button(
   );
 }
 
-export default React.forwardRef(Button);
+export default Button;

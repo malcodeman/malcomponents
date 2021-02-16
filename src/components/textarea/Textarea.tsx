@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { size } from "../input/constants";
+import { textareaProps } from "../../types";
 import { getInputStyles } from "../input/styles";
 
 const StyledTextarea = styled.textarea`
@@ -9,23 +9,9 @@ const StyledTextarea = styled.textarea`
   ${getInputStyles};
 `;
 
-type props = {
-  inputSize?: size;
-  name?: string;
-  value?: string;
-  placeholder?: string;
-  disabled?: boolean;
-  error?: boolean;
-  positive?: boolean;
-  autoFocus?: boolean;
-  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  onBlur?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
-};
-
-function Textarea(props: props): React.ReactElement {
+function Textarea(props: textareaProps): React.ReactElement {
   const {
     inputSize = "default",
-    value = "",
     placeholder = "",
     disabled = false,
     error = false,
@@ -39,7 +25,6 @@ function Textarea(props: props): React.ReactElement {
     <StyledTextarea
       {...props}
       inputSize={inputSize}
-      value={value}
       placeholder={placeholder}
       disabled={disabled}
       error={error}

@@ -3,7 +3,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
 import { DarkTheme, LightTheme } from "../src/themes";
 
-import ThemeProvider from "../src/ThemeProvider";
+import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Spinner from "../src/components/spinner/Spinner";
 
 export default { title: "Spinner", decorators: [withKnobs] };

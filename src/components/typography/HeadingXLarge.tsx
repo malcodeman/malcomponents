@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+import { typographyProps } from "../../types";
+
 const StyledHeading = styled.h2<{ mt?: string; mb?: string }>`
   color: ${(props) => props.theme.malcode.colors.contentPrimary};
   font-size: ${(props) => props.theme.malcode.typography.size.headingXLarge};
@@ -16,13 +18,7 @@ const StyledHeading = styled.h2<{ mt?: string; mb?: string }>`
     `}
 `;
 
-type props = {
-  mt?: string;
-  mb?: string;
-  children?: React.ReactNode;
-};
-
-function HeadingXLarge(props: props): React.ReactElement {
+function HeadingXLarge(props: typographyProps): React.ReactElement {
   const { children } = props;
 
   return <StyledHeading {...props}>{children}</StyledHeading>;

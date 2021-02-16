@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 import { DarkTheme, LightTheme } from "../src/themes";
 
-import ThemeProvider from "../src/ThemeProvider";
+import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Input from "../src/components/input/Input";
 import Button from "../src/components/button/Button";
 
@@ -26,23 +26,6 @@ export function ReactHookForm(): React.ReactElement {
         <Input name="lastName" ref={register} />
         <Button>Submit</Button>
       </form>
-    </ThemeProvider>
-  );
-}
-
-export function ButtonRef(): React.ReactElement {
-  const darkTheme = boolean("darkTheme", false);
-  const theme = darkTheme ? DarkTheme : LightTheme;
-  const ref: React.Ref<HTMLButtonElement> = React.createRef();
-
-  function handleOnClick() {
-    console.log(ref);
-  }
-
-  return (
-    <ThemeProvider theme={theme}>
-      <Button ref={ref}>Ref button</Button>
-      <Button onClick={handleOnClick}>Click</Button>
     </ThemeProvider>
   );
 }
