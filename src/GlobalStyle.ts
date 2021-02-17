@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin: 0;
   }
+
+  textarea {
+    font-family: ${(props) => props.theme.malcode.typography.type.primary};
+  }
 `;
 
 export default GlobalStyle;
