@@ -15,6 +15,10 @@ const typography = {
     headingLarge: "2rem",
     headingXLarge: "2.25rem",
     headingXXLarge: "2.5rem",
+    displayXSmall: "2.25rem",
+    displaySmall: "2.75rem",
+    displayMedium: "3.25rem",
+    displayLarge: "6rem",
   },
 };
 const LightTheme: DefaultTheme = {

@@ -22,4 +22,8 @@ export { default as HeadingMedium } from "./components/typography/HeadingMedium"
 export { default as HeadingLarge } from "./components/typography/HeadingLarge";
 export { default as HeadingXLarge } from "./components/typography/HeadingXLarge";
 export { default as HeadingXXLarge } from "./components/typography/HeadingXXLarge";
+export { default as DisplayXSmall } from "./components/typography/DisplayXSmall";
+export { default as DisplaySmall } from "./components/typography/DisplaySmall";
+export { default as DisplayMedium } from "./components/typography/DisplayMedium";
+export { default as DisplayLarge } from "./components/typography/DisplayLarge";
 export { default as GlobalStyle } from "./GlobalStyle";

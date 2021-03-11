@@ -6,6 +6,7 @@ import { typographyProps } from "../../types";
 const StyledHeading = styled.h4<{ mt?: string; mb?: string }>`
   color: ${(props) => props.theme.malcode.colors.contentPrimary};
   font-size: ${(props) => props.theme.malcode.typography.size.headingMedium};
+  font-weight: bold;
   ${(props) =>
     props.mt &&
     css`

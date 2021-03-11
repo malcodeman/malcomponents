@@ -8,6 +8,10 @@ import HeadingMedium from "./HeadingMedium";
 import HeadingLarge from "./HeadingLarge";
 import HeadingXLarge from "./HeadingXLarge";
 import HeadingXXLarge from "./HeadingXXLarge";
+import DisplayXSmall from "./DisplayXSmall";
+import DisplaySmall from "./DisplaySmall";
+import DisplayMedium from "./DisplayMedium";
+import DisplayLarge from "./DisplayLarge";
 
 export default {
   ParagraphXSmall,
@@ -20,4 +24,8 @@ export default {
   HeadingLarge,
   HeadingXLarge,
   HeadingXXLarge,
+  DisplayXSmall,
+  DisplaySmall,
+  DisplayMedium,
+  DisplayLarge,
 };

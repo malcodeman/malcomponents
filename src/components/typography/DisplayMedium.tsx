@@ -3,9 +3,9 @@ import styled, { css } from "styled-components";
 
 import { typographyProps } from "../../types";
 
-const StyledHeading = styled.h3<{ mt?: string; mb?: string }>`
+const StyledDisplay = styled.div<{ mt?: string; mb?: string }>`
   color: ${(props) => props.theme.malcode.colors.contentPrimary};
-  font-size: ${(props) => props.theme.malcode.typography.size.headingLarge};
+  font-size: ${(props) => props.theme.malcode.typography.size.displayMedium};
   font-weight: bold;
   ${(props) =>
     props.mt &&
@@ -19,10 +19,10 @@ const StyledHeading = styled.h3<{ mt?: string; mb?: string }>`
     `}
 `;
 
-function HeadingLarge(props: typographyProps): React.ReactElement {
+function DisplayMedium(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledHeading {...props}>{children}</StyledHeading>;
+  return <StyledDisplay {...props}>{children}</StyledDisplay>;
 }
 
-export default HeadingLarge;
+export default DisplayMedium;

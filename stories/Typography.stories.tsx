@@ -157,3 +157,63 @@ export function HeadingXXLarge(): React.ReactElement {
     </ThemeProvider>
   );
 }
+
+export function DisplayXSmall(): React.ReactElement {
+  const mt = text("mt", "0rem");
+  const mb = text("mb", "0rem");
+  const darkTheme = boolean("darkTheme", false);
+  const theme = darkTheme ? DarkTheme : LightTheme;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Typography.DisplayXSmall mt={mt} mb={mb}>
+        DisplayXSmall
+      </Typography.DisplayXSmall>
+    </ThemeProvider>
+  );
+}
+
+export function DisplaySmall(): React.ReactElement {
+  const mt = text("mt", "0rem");
+  const mb = text("mb", "0rem");
+  const darkTheme = boolean("darkTheme", false);
+  const theme = darkTheme ? DarkTheme : LightTheme;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Typography.DisplaySmall mt={mt} mb={mb}>
+        DisplaySmall
+      </Typography.DisplaySmall>
+    </ThemeProvider>
+  );
+}
+
+export function DisplayMedium(): React.ReactElement {
+  const mt = text("mt", "0rem");
+  const mb = text("mb", "0rem");
+  const darkTheme = boolean("darkTheme", false);
+  const theme = darkTheme ? DarkTheme : LightTheme;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Typography.DisplayMedium mt={mt} mb={mb}>
+        DisplayMedium
+      </Typography.DisplayMedium>
+    </ThemeProvider>
+  );
+}
+
+export function DisplayLarge(): React.ReactElement {
+  const mt = text("mt", "0rem");
+  const mb = text("mb", "0rem");
+  const darkTheme = boolean("darkTheme", false);
+  const theme = darkTheme ? DarkTheme : LightTheme;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Typography.DisplayLarge mt={mt} mb={mb}>
+        DisplayLarge
+      </Typography.DisplayLarge>
+    </ThemeProvider>
+  );
+}

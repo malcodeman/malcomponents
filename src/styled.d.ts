@@ -59,6 +59,10 @@ declare module "styled-components" {
           headingLarge: string;
           headingXLarge: string;
           headingXXLarge: string;
+          displayXSmall: string;
+          displaySmall: string;
+          displayMedium: string;
+          displayLarge: string;
         };
       };
     };
