@@ -89,6 +89,7 @@ export type typographyProps = {
   mt?: string;
   mb?: string;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 };
 
 export type iconProps = {
