@@ -22,7 +22,11 @@ const StyledHeading = styled.h2<{ mt?: string; mb?: string }>`
 function HeadingXLarge(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledHeading {...props}>{children}</StyledHeading>;
+  return (
+    <StyledHeading {...props} data-malcomponents="heading-x-large">
+      {children}
+    </StyledHeading>
+  );
 }
 
 export default HeadingXLarge;

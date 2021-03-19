@@ -105,6 +105,7 @@ function Button(props: buttonProps): React.ReactElement {
       isSelected={isSelected}
       shouldFitContainer={shouldFitContainer}
       onClick={internalOnClick}
+      data-malcomponents="button"
     >
       {isLoading ? <Spinner /> : children}
     </StyledButton>

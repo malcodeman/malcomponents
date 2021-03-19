@@ -22,7 +22,11 @@ const StyledDisplay = styled.div<{ mt?: string; mb?: string }>`
 function DisplayMedium(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledDisplay {...props}>{children}</StyledDisplay>;
+  return (
+    <StyledDisplay {...props} data-malcomponents="display-medium">
+      {children}
+    </StyledDisplay>
+  );
 }
 
 export default DisplayMedium;

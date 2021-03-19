@@ -13,7 +13,11 @@ const StyledModalButton = styled(Button)`
 function ModalButton(props: buttonProps): React.ReactElement {
   const { children, ...rest } = props;
 
-  return <StyledModalButton {...rest}>{children}</StyledModalButton>;
+  return (
+    <StyledModalButton {...rest} data-malcomponents="modal-button">
+      {children}
+    </StyledModalButton>
+  );
 }
 
 export default ModalButton;

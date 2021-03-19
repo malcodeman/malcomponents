@@ -32,6 +32,7 @@ function Textarea(props: textareaProps): React.ReactElement {
       autoFocus={autoFocus}
       onChange={onChange}
       onBlur={onBlur}
+      data-malcomponents="textarea"
     />
   );
 }

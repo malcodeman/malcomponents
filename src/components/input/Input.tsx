@@ -35,6 +35,7 @@ function Input(
       autoFocus={autoFocus}
       onChange={onChange}
       onBlur={onBlur}
+      data-malcomponents="input"
     />
   );
 }

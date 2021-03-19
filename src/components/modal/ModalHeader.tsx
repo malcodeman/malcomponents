@@ -13,7 +13,11 @@ type props = {
 function ModalHeader(props: props): React.ReactElement {
   const { children } = props;
 
-  return <StyledModalHeader>{children}</StyledModalHeader>;
+  return (
+    <StyledModalHeader data-malcomponents="modal-header">
+      {children}
+    </StyledModalHeader>
+  );
 }
 
 export default ModalHeader;

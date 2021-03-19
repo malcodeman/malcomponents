@@ -28,7 +28,14 @@ function Spinner(props: spinnerProps): React.ReactElement {
   const theme = useTheme();
   const { color = theme.malcode.colors.accent, size = "1rem" } = props;
 
-  return <StyledSpinner {...props} color={color} size={size} />;
+  return (
+    <StyledSpinner
+      {...props}
+      color={color}
+      size={size}
+      data-malcomponents="spinner"
+    />
+  );
 }
 
 export default Spinner;

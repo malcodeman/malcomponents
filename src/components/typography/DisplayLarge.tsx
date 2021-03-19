@@ -22,7 +22,11 @@ const StyledDisplay = styled.div<{ mt?: string; mb?: string }>`
 function DisplayLarge(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledDisplay {...props}>{children}</StyledDisplay>;
+  return (
+    <StyledDisplay {...props} data-malcomponents="display-large">
+      {children}
+    </StyledDisplay>
+  );
 }
 
 export default DisplayLarge;

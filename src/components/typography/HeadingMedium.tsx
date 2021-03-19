@@ -22,7 +22,11 @@ const StyledHeading = styled.h4<{ mt?: string; mb?: string }>`
 function HeadingMedium(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledHeading {...props}>{children}</StyledHeading>;
+  return (
+    <StyledHeading {...props} data-malcomponents="heading-medium">
+      {children}
+    </StyledHeading>
+  );
 }
 
 export default HeadingMedium;

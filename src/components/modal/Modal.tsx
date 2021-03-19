@@ -58,7 +58,7 @@ function Modal(props: modalProps): React.ReactElement {
   }
   return createPortal(
     <Backdrop>
-      <StyledModal {...rest} ref={ref} role={role}>
+      <StyledModal {...rest} ref={ref} role={role} data-malcomponents="modal">
         {children}
         <CloseButton onClick={onClose}>
           <XIcon />

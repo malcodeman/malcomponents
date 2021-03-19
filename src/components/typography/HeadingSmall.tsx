@@ -22,7 +22,11 @@ const StyledHeading = styled.h5<{ mt?: string; mb?: string }>`
 function HeadingSmall(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledHeading {...props}>{children}</StyledHeading>;
+  return (
+    <StyledHeading {...props} data-malcomponents="heading-small">
+      {children}
+    </StyledHeading>
+  );
 }
 
 export default HeadingSmall;

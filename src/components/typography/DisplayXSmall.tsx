@@ -22,7 +22,11 @@ const StyledDisplay = styled.div<{ mt?: string; mb?: string }>`
 function DisplayXSmall(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledDisplay {...props}>{children}</StyledDisplay>;
+  return (
+    <StyledDisplay {...props} data-malcomponents="display-x-small">
+      {children}
+    </StyledDisplay>
+  );
 }
 
 export default DisplayXSmall;

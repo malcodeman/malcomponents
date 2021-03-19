@@ -14,7 +14,11 @@ type props = {
 function ModalFooter(props: props): React.ReactElement {
   const { children } = props;
 
-  return <StyledModalFooter>{children}</StyledModalFooter>;
+  return (
+    <StyledModalFooter data-malcomponents="modal-footer">
+      {children}
+    </StyledModalFooter>
+  );
 }
 
 export default ModalFooter;

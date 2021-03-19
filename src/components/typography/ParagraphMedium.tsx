@@ -21,7 +21,11 @@ const StyledParagraph = styled.p<{ mt?: string; mb?: string }>`
 function ParagraphMedium(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledParagraph {...props}>{children}</StyledParagraph>;
+  return (
+    <StyledParagraph {...props} data-malcomponents="paragraph-medium">
+      {children}
+    </StyledParagraph>
+  );
 }
 
 export default ParagraphMedium;

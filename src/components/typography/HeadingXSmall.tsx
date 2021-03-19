@@ -22,7 +22,11 @@ const StyledHeading = styled.h6<{ mt?: string; mb?: string }>`
 function HeadingXSmall(props: typographyProps): React.ReactElement {
   const { children } = props;
 
-  return <StyledHeading {...props}>{children}</StyledHeading>;
+  return (
+    <StyledHeading {...props} data-malcomponents="heading-x-small">
+      {children}
+    </StyledHeading>
+  );
 }
 
 export default HeadingXSmall;

@@ -48,7 +48,7 @@ function FormControl(props: formControlProps): React.ReactElement {
   } = props;
 
   return (
-    <StyledFormControl>
+    <StyledFormControl data-malcomponents="form-control">
       {label && (
         <Label disabled={disabled} htmlFor={htmlFor}>
           {label}

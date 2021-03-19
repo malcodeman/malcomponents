@@ -56,7 +56,11 @@ function Notification(props: notificationProps): React.ReactElement {
   const { kind = "info", shouldFitContainer = false, children } = props;
 
   return (
-    <StyledNofitication kind={kind} shouldFitContainer={shouldFitContainer}>
+    <StyledNofitication
+      kind={kind}
+      shouldFitContainer={shouldFitContainer}
+      data-malcomponents="notification"
+    >
       {children}
     </StyledNofitication>
   );

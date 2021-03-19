@@ -13,7 +13,11 @@ type props = {
 function ModalBody(props: props): React.ReactElement {
   const { children } = props;
 
-  return <StyledModalBody>{children}</StyledModalBody>;
+  return (
+    <StyledModalBody data-malcomponents="modal-body">
+      {children}
+    </StyledModalBody>
+  );
 }
 
 export default ModalBody;
