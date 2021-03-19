@@ -9,7 +9,10 @@ const StyledTextarea = styled.textarea`
   ${getInputStyles};
 `;
 
-function Textarea(props: textareaProps): React.ReactElement {
+function Textarea(
+  props: textareaProps,
+  ref: React.ForwardedRef<HTMLTextAreaElement>
+): React.ReactElement {
   const {
     inputSize = "default",
     placeholder = "",
@@ -24,6 +27,7 @@ function Textarea(props: textareaProps): React.ReactElement {
   return (
     <StyledTextarea
       {...props}
+      ref={ref}
       inputSize={inputSize}
       placeholder={placeholder}
       disabled={disabled}
@@ -37,4 +41,4 @@ function Textarea(props: textareaProps): React.ReactElement {
   );
 }
 
-export default Textarea;
+export default React.forwardRef(Textarea);

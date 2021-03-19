@@ -13,6 +13,7 @@ export type buttonProps = {
   shouldFitContainer?: boolean;
   children?: React.ReactNode;
   onClick?: () => void;
+  style?: React.CSSProperties;
 };
 
 export type formControlProps = {
@@ -23,6 +24,7 @@ export type formControlProps = {
   error?: boolean;
   positive?: boolean;
   children?: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
+  style?: React.CSSProperties;
 };
 
 export declare type inputSize = "default" | "compact" | "large";
@@ -38,6 +40,7 @@ export type inputProps = {
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  style?: React.CSSProperties;
 };
 
 export declare type modalRole = "dialog" | "alertdialog";
@@ -48,6 +51,7 @@ export type modalProps = {
   role?: modalRole;
   onClose?: () => void;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 };
 
 export declare type notificationKind =
@@ -60,11 +64,13 @@ export type notificationProps = {
   kind?: notificationKind;
   shouldFitContainer?: boolean;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 };
 
 export type spinnerProps = {
   color?: string;
   size?: string;
+  style?: React.CSSProperties;
 };
 
 export type textareaProps = {
@@ -78,6 +84,7 @@ export type textareaProps = {
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
   onBlur?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  style?: React.CSSProperties;
 };
 
 export type themeProviderProps = {
@@ -95,4 +102,5 @@ export type typographyProps = {
 export type iconProps = {
   color?: string;
   size?: number;
+  style?: React.CSSProperties;
 };

@@ -45,10 +45,11 @@ function FormControl(props: formControlProps): React.ReactElement {
     error = false,
     positive = false,
     children,
+    ...rest
   } = props;
 
   return (
-    <StyledFormControl data-malcomponents="form-control">
+    <StyledFormControl data-malcomponents="form-control" {...rest}>
       {label && (
         <Label disabled={disabled} htmlFor={htmlFor}>
           {label}

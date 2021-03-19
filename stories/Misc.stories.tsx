@@ -7,6 +7,7 @@ import { DarkTheme, LightTheme } from "../src/themes";
 import ThemeProvider from "../src/components/theme-provider/ThemeProvider";
 import Input from "../src/components/input/Input";
 import Button from "../src/components/button/Button";
+import Textarea from "../src/components/textarea/Textarea";
 
 export default { title: "Misc", decorators: [withKnobs] };
 
@@ -24,6 +25,7 @@ export function ReactHookForm(): React.ReactElement {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input name="firstName" ref={register} />
         <Input name="lastName" ref={register} />
+        <Textarea name="about" ref={register} />
         <Button>Submit</Button>
       </form>
     </ThemeProvider>
